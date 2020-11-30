@@ -24,6 +24,10 @@ namespace DressDoll
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
+
             synth.Speak("Inicializando la Aplicación");
 
             Grammar grammar = CreateGrammarBuilderDollDressSemantics(null);
@@ -47,41 +51,78 @@ namespace DressDoll
           
                       string rawText = e.Result.Text;
                       RecognitionResult result = e.Result;
-            /*
-                      if (!semantics.ContainsKey("rgb"))
+            
+                      if (!semantics.ContainsKey("partesArriba") && !semantics.ContainsKey("partesAbajo"))
                       {
-                          this.label1.Text = "No info provided.";
+                            synth.Speak("Lo siento no te entiendo");
                       }
                       else
                       {
-                          this.label1.Text = rawText;
-                          this.BackColor = Color.FromArgb((int)semantics["rgb"].Value);
-                          Update();
-                          //synth.Speak(rawText);
-                      }*/
+                            synth.Speak("hola estoy funcionando");
+
+                            if (semantics.ContainsKey("partesAbajo")) {
+                                 synth.Speak("hola he entrado en falda");
+                                 pictureBox3.Visible = true;
+                                 pictureBox3.Image = DressDoll.Properties.Resources.Summer_Skirt;
+                        }
+                          
+                      }
         }
         
 
         private Grammar CreateGrammarBuilderDollDressSemantics(params int[] info)
         {
             //synth.Speak("Creando ahora la gramática");
-            Choices clothChoice = new Choices();
+            Choices partesAbajoChoice = new Choices();
+            Choices partesArribaChoice = new Choices();
+            Choices parteEnteraChoice = new Choices();
+            Choices calzadoChoice = new Choices();
 
+
+            // Partes de abajo 
 
             SemanticResultValue choiceResultValue =
-                    new SemanticResultValue("Falda", "Skirt.png");
+                    new SemanticResultValue("Falda", "Summer_Skirt");
             GrammarBuilder resultValueBuilder = new GrammarBuilder(choiceResultValue);
-            clothChoice.Add(resultValueBuilder);
+            partesAbajoChoice.Add(resultValueBuilder);
 
             choiceResultValue =
-                   new SemanticResultValue("Pantalón", "");
+                   new SemanticResultValue("Pantalón", "Autumn Pants");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
-            clothChoice.Add(resultValueBuilder);
+            partesAbajoChoice.Add(resultValueBuilder);
+
+            // Fin partes de abajo
 
 
-            SemanticResultKey choiceResultKey = new SemanticResultKey("partesArriba", clothChoice);
-            SemanticResultKey choiceResultKey = new SemanticResultKey("partesAbajo", clothChoice);
-            GrammarBuilder ropa = new GrammarBuilder(choiceResultKey);
+            // Partes de arriba 
+
+            new SemanticResultValue("Camiseta", "");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            partesArribaChoice.Add(resultValueBuilder);
+
+            new SemanticResultValue("Chaqueta", "Spring Jacket");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            partesArribaChoice.Add(resultValueBuilder);
+
+            new SemanticResultValue("Abrigo", "Autumn Coat");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            partesArribaChoice.Add(resultValueBuilder);
+
+
+            // Fin partes de arriba
+
+            // Partes enteras
+
+            new SemanticResultValue("Vestido", "");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            parteEnteraChoice.Add(resultValueBuilder);
+
+           
+            // Fin partes enteras
+
+            SemanticResultKey choiceResultKeyArriba = new SemanticResultKey("partesArriba", partesArribaChoice);
+            SemanticResultKey choiceResultKeyAbajo = new SemanticResultKey("partesAbajo", partesAbajoChoice );
+            GrammarBuilder ropa = new GrammarBuilder(choiceResultKeyAbajo);
 
 
             GrammarBuilder poner = "Ponerse";

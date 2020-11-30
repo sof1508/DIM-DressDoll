@@ -183,16 +183,6 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Pirate_Boy_Bottom {
-            get {
-                object obj = ResourceManager.GetObject("Pirate_Boy_Bottom", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Pirate_Boy_Costume {
             get {
                 object obj = ResourceManager.GetObject("Pirate_Boy_Costume", resourceCulture);
@@ -203,39 +193,9 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Pirate_Boy_Top {
-            get {
-                object obj = ResourceManager.GetObject("Pirate_Boy_Top", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Pirate_Girl_Blouse {
-            get {
-                object obj = ResourceManager.GetObject("Pirate_Girl_Blouse", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Pirate_Girl_Costume {
             get {
                 object obj = ResourceManager.GetObject("Pirate_Girl_Costume", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Pirate_Girl_Skirt {
-            get {
-                object obj = ResourceManager.GetObject("Pirate_Girl_Skirt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

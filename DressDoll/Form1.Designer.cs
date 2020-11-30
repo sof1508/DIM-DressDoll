@@ -70,9 +70,11 @@ namespace DressDoll
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(247, 372);
+            this.pictureBox3.Image = global::DressDoll.Properties.Resources.Summer_Skirt;
+            this.pictureBox3.Location = new System.Drawing.Point(213, 329);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(186, 173);
+            this.pictureBox3.Size = new System.Drawing.Size(288, 330);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
@@ -95,6 +97,7 @@ namespace DressDoll
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
