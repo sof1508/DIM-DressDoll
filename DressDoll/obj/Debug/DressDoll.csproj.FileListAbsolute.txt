@@ -1,0 +1,10 @@
+C:\Users\sandra\source\repos\DressDoll\DressDoll\bin\Debug\DressDoll.exe.config
+C:\Users\sandra\source\repos\DressDoll\DressDoll\bin\Debug\DressDoll.exe
+C:\Users\sandra\source\repos\DressDoll\DressDoll\bin\Debug\DressDoll.pdb
+C:\Users\sandra\source\repos\DressDoll\DressDoll\obj\Debug\DressDoll.csprojAssemblyReference.cache
+C:\Users\sandra\source\repos\DressDoll\DressDoll\obj\Debug\DressDoll.Form1.resources
+C:\Users\sandra\source\repos\DressDoll\DressDoll\obj\Debug\DressDoll.Properties.Resources.resources
+C:\Users\sandra\source\repos\DressDoll\DressDoll\obj\Debug\DressDoll.csproj.GenerateResource.cache
+C:\Users\sandra\source\repos\DressDoll\DressDoll\obj\Debug\DressDoll.csproj.CoreCompileInputs.cache
+C:\Users\sandra\source\repos\DressDoll\DressDoll\obj\Debug\DressDoll.exe
+C:\Users\sandra\source\repos\DressDoll\DressDoll\obj\Debug\DressDoll.pdb
