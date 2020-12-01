@@ -17,17 +17,18 @@ namespace DressDoll
         new SpeechRecognitionEngine();
         private SpeechSynthesizer synth = new SpeechSynthesizer();
 
+        /* VARIABLES GLOBALES */
+  
+
         public Form1()
         {
             InitializeComponent();
+            InicializarImagenes();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            pictureBox2.Visible = false;
-            pictureBox3.Visible = false;
-            pictureBox4.Visible = false;
-
             synth.Speak("Inicializando la Aplicación");
 
             Grammar grammar = CreateGrammarBuilderDollDressSemantics(null);
@@ -62,8 +63,7 @@ namespace DressDoll
 
                             if (semantics.ContainsKey("partesAbajo")) {
                                  synth.Speak("hola he entrado en falda");
-                                 pictureBox3.Visible = true;
-                                 pictureBox3.Image = DressDoll.Properties.Resources.Summer_Skirt;
+                                 parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
                         }
                           
                       }
