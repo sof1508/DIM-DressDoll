@@ -130,29 +130,8 @@
   <data name="Autumn_Tights" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Autumn Tights.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Boy_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boy 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boy_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boy 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boy_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boy 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boy_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boy 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Girl_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Girl 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Girl_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Girl 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Girl_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Girl 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Girl_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Girl 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pirate_Boy_Costume" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pirate Boy Costume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +175,8 @@
   <data name="Summer_T_Shirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Summer_T-Shirt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tights" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tights.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TrajeFestivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrajeFestivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Winter_Boots" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Winter Boots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

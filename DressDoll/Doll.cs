@@ -19,5 +19,12 @@ namespace DressDoll
             Zapatos = zapatos;
             ParteEntera = parteEntera;
         }
+
+        //METODO PARA VER QUE ROPA LLEVA POR EJEMPLO SI TIEN FALDA Y QUIERO UN VESTIDO PUES TENDRE QUE SABERLO
+       /* public bool consultarRopa(String ropaPuesta) {
+
+            return false;
+        }
+       */
     }
 }
