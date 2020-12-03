@@ -60,17 +60,17 @@ namespace DressDoll
             }
             else
             {
-                synth.Speak("hola estoy funcionando");
-                if (semantics.ContainsKey("Ponerse")) {
+                //synth.Speak("hola estoy funcionando");
+                if (semantics.ContainsKey("Poner")) { //repasar las key
                 
                     if (semantics.ContainsKey("partesAbajo")) {
                          
-                        parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
+                        //parteAbajo.Image = DressDoll.Properties.Resources.______;
                     }
                           
                 }
 
-                if (semantics.ContainsKey("Quitarse")) { }
+                if (semantics.ContainsKey("Quitar")) { }
             }
             
         }
