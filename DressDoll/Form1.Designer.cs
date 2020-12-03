@@ -45,7 +45,6 @@ namespace DressDoll
             this.parteAbajo = new System.Windows.Forms.PictureBox();
             this.zapatos = new System.Windows.Forms.PictureBox();
             this.parteEntera = new System.Windows.Forms.PictureBox();
-            this.hola = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cuerpo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parteArriba)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parteAbajo)).BeginInit();
@@ -104,22 +103,12 @@ namespace DressDoll
             this.parteEntera.TabIndex = 4;
             this.parteEntera.TabStop = false;
             // 
-            // hola
-            // 
-            this.hola.AutoSize = true;
-            this.hola.Location = new System.Drawing.Point(598, 434);
-            this.hola.Name = "hola";
-            this.hola.Size = new System.Drawing.Size(46, 17);
-            this.hola.TabIndex = 5;
-            this.hola.Text = "label1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(699, 722);
-            this.Controls.Add(this.hola);
             this.Controls.Add(this.parteEntera);
             this.Controls.Add(this.zapatos);
             this.Controls.Add(this.parteAbajo);
@@ -134,7 +123,6 @@ namespace DressDoll
             ((System.ComponentModel.ISupportInitialize)(this.zapatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parteEntera)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -180,7 +168,6 @@ namespace DressDoll
         private PictureBox parteAbajo;
         private PictureBox zapatos;
         private PictureBox parteEntera;
-        private Label hola;
     }
 }
 

@@ -130,11 +130,17 @@ namespace DressDoll
             zapatosChoice.Add(resultValueBuilder);
             // Fin zapatos
 
+            //Creación de palabras claves para despues mirar si lo que dice corresponde a esa clave (CREO?¿?¿)
             SemanticResultKey choiceResultKeyArriba = new SemanticResultKey("partesArriba", partesArribaChoice);
             SemanticResultKey choiceResultKeyAbajo = new SemanticResultKey("partesAbajo", partesAbajoChoice );
+            SemanticResultKey choiceResultKeyZapatos = new SemanticResultKey("zapatos", zapatosChoice);
+            SemanticResultKey choiceResultKeyEntero = new SemanticResultKey("parteEntera", parteEnteraChoice);
+
             GrammarBuilder partesArriba = new GrammarBuilder(choiceResultKeyArriba);
             GrammarBuilder partesAbajo = new GrammarBuilder(choiceResultKeyAbajo);
-            
+            GrammarBuilder zapatos = new GrammarBuilder(choiceResultKeyZapatos);
+            GrammarBuilder partesEnteras = new GrammarBuilder(choiceResultKeyEntero);
+
 
             //EN PROCESO
             GrammarBuilder poner = "Poner";
