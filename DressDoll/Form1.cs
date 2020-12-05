@@ -53,8 +53,6 @@ namespace DressDoll
             string rawText = e.Result.Text;
             RecognitionResult result = e.Result;
 
-            Console.WriteLine("Frase antes de nada");
-
             if (!semantics.ContainsKey("partesArriba") || !semantics.ContainsKey("partesAbajo"))
             {
                 synth.Speak("Lo siento no te entiendo");
@@ -156,7 +154,7 @@ namespace DressDoll
             //.Append(colorElement);
 
             GrammarBuilder quitarFrase = new GrammarBuilder("Quitar");
-            //setPhrase.Append(colorElement);
+            //.Append(colorElement);
 
             GrammarBuilder fondoFrase = new GrammarBuilder("Ir a");
 
