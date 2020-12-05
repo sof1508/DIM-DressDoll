@@ -53,27 +53,18 @@ namespace DressDoll
             string rawText = e.Result.Text;
             RecognitionResult result = e.Result;
 
-            if (!semantics.ContainsKey("partesArriba") || !semantics.ContainsKey("partesAbajo"))
+           /* if (!semantics.ContainsKey("rgb"))
             {
-                synth.Speak("Lo siento no te entiendo");
-                //synth.Speak("Si desea jugar prueba a decir");
+                this.label1.Text = "No info provided.";
             }
             else
             {
-                synth.Speak("hola estoy funcionando");
-                if (semantics.ContainsKey("Poner")) { //repasar las key
-                
-                    if (semantics.ContainsKey("partesAbajo")) {
-                         
-                        //parteAbajo.Image = DressDoll.Properties.Resources.______;
-                    }
-                          
-                }
-                synth.Speak("me voy");
+                this.label1.Text = rawText;
+                this.BackColor = Color.FromArgb((int)semantics["rgb"].Value);
+                Update();
+                //synth.Speak(rawText);
+            }*/
 
-                if (semantics.ContainsKey("Quitar")) { }
-            }
-            
         }
         
 
