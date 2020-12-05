@@ -173,10 +173,10 @@ namespace DressDoll
             Choices cambiarAlternativa = new Choices(poner, cambiar);           
             
             GrammarBuilder cambiarFrase = new GrammarBuilder(cambiarAlternativa);
-            //cambiarFrase.Append(opcionesRopa);
+            cambiarFrase.Append(opcionesRopa);
 
             GrammarBuilder quitarFrase = new GrammarBuilder("Quitar");
-            //quitarFrase.Append(opcionesRopa);
+            quitarFrase.Append(opcionesRopa);
 
             GrammarBuilder fondoFrase = new GrammarBuilder("Ir a");
             fondoFrase.Append(lugares);

@@ -154,7 +154,7 @@ namespace DressDoll
             parteEntera.Image = DressDoll.Properties.Resources.Winter_Dress;
             parteEntera.Image = DressDoll.Properties.Resources.TrajeFestivo;
           */
-            this.BackgroundImage = DressDoll.Properties.Resources.parque;
+           // this.BackgroundImage = DressDoll.Properties.Resources.parque;
         }
         #endregion
 
