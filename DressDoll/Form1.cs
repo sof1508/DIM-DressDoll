@@ -122,16 +122,19 @@ namespace DressDoll
             zapatosChoice.Add(resultValueBuilder);
             // Fin zapatos
 
-            //Creación de palabras claves para despues mirar si lo que dice corresponde a esa clave (CREO?¿?¿)
+            //Creación de palabras claves ropa
             SemanticResultKey choiceResultKeyArriba = new SemanticResultKey("partesArriba", partesArribaChoice);
             SemanticResultKey choiceResultKeyAbajo = new SemanticResultKey("partesAbajo", partesAbajoChoice );
             SemanticResultKey choiceResultKeyZapatos = new SemanticResultKey("zapatos", zapatosChoice);
             SemanticResultKey choiceResultKeyEntero = new SemanticResultKey("parteEntera", parteEnteraChoice);
-
+            
+            //Creación de grammarbuilder ropa
             GrammarBuilder partesArriba = new GrammarBuilder(choiceResultKeyArriba);
             GrammarBuilder partesAbajo = new GrammarBuilder(choiceResultKeyAbajo);
             GrammarBuilder zapatos = new GrammarBuilder(choiceResultKeyZapatos);
             GrammarBuilder partesEnteras = new GrammarBuilder(choiceResultKeyEntero);
+
+            Choices opcionesRopa = new Choices(new GrammarBuilder[] { partesArriba, partesAbajo, zapatos, partesEnteras });
 
 
             //Opciones de lugares para ir
@@ -142,26 +145,28 @@ namespace DressDoll
             lugaresChoice.Add(resultValueBuilder);
 
             choiceResultValue =
-                   new SemanticResultValue("Playa", "");
+                   new SemanticResultValue("Playa", "playa");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             lugaresChoice.Add(resultValueBuilder);
 
+            SemanticResultKey choiceResultKeyLugares = new SemanticResultKey("Lugares", lugaresChoice);
 
+            GrammarBuilder lugares = new GrammarBuilder(choiceResultKeyLugares);
 
-            //EN PROCESO
+            //FRASES
             GrammarBuilder poner = "Poner";
             GrammarBuilder cambiar = "Cambiar";
 
             Choices cambiarAlternativa = new Choices(poner, cambiar);           
-            //Frases posibles
-
+            
             GrammarBuilder cambiarFrase = new GrammarBuilder(cambiarAlternativa);
-            //.Append(colorElement);
+            cambiarFrase.Append(opcionesRopa);
 
             GrammarBuilder quitarFrase = new GrammarBuilder("Quitar");
-            //.Append(colorElement);
+            quitarFrase.Append(opcionesRopa);
 
             GrammarBuilder fondoFrase = new GrammarBuilder("Ir a");
+            fondoFrase.Append(lugares);
 
             Choices opcionesFrase = new Choices(new GrammarBuilder[] {cambiarFrase, quitarFrase, fondoFrase});
             Grammar grammar = new Grammar((GrammarBuilder)opcionesFrase);
