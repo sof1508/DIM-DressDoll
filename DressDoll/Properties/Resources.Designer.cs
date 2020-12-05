@@ -93,16 +93,6 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Autumn_Tights {
-            get {
-                object obj = ResourceManager.GetObject("Autumn_Tights", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Girl_1 {
             get {
                 object obj = ResourceManager.GetObject("Girl_1", resourceCulture);
@@ -166,16 +156,6 @@ namespace DressDoll.Properties {
         internal static System.Drawing.Bitmap Summer_Dress {
             get {
                 object obj = ResourceManager.GetObject("Summer_Dress", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Summer_Hat {
-            get {
-                object obj = ResourceManager.GetObject("Summer_Hat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,16 +256,6 @@ namespace DressDoll.Properties {
         internal static System.Drawing.Bitmap Winter_boots_2 {
             get {
                 object obj = ResourceManager.GetObject("Winter_boots_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap winter_clothes {
-            get {
-                object obj = ResourceManager.GetObject("winter_clothes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

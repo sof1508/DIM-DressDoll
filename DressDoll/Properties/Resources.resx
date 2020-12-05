@@ -127,9 +127,6 @@
   <data name="Autumn_Pants" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Autumn Pants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Autumn_Tights" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Autumn Tights.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Girl_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Girl 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,9 +147,6 @@
   </data>
   <data name="Summer_Dress" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Summer_Dress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Summer_Hat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Summer_Hat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Summer_Sandals" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Summer_Sandals.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,9 +177,6 @@
   </data>
   <data name="Winter_boots_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Winter boots 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="winter_clothes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\winter clothes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Winter_Dress" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Winter Dress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

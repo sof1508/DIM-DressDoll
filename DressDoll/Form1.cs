@@ -134,6 +134,20 @@ namespace DressDoll
             GrammarBuilder partesEnteras = new GrammarBuilder(choiceResultKeyEntero);
 
 
+            //Opciones de lugares para ir
+            Choices lugaresChoice = new Choices();
+            choiceResultValue =
+                   new SemanticResultValue("Pasear", "");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            lugaresChoice.Add(resultValueBuilder);
+
+            choiceResultValue =
+                   new SemanticResultValue("Playa", "");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            lugaresChoice.Add(resultValueBuilder);
+
+
+
             //EN PROCESO
             GrammarBuilder poner = "Poner";
             GrammarBuilder cambiar = "Cambiar";
