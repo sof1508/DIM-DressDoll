@@ -53,14 +53,16 @@ namespace DressDoll
             string rawText = e.Result.Text;
             RecognitionResult result = e.Result;
 
-            if (!semantics.ContainsKey("partesArriba") && !semantics.ContainsKey("partesAbajo"))
+            Console.WriteLine("Frase antes de nada");
+
+            if (!semantics.ContainsKey("partesArriba") || !semantics.ContainsKey("partesAbajo"))
             {
                 synth.Speak("Lo siento no te entiendo");
                 //synth.Speak("Si desea jugar prueba a decir");
             }
             else
             {
-                //synth.Speak("hola estoy funcionando");
+                synth.Speak("hola estoy funcionando");
                 if (semantics.ContainsKey("Poner")) { //repasar las key
                 
                     if (semantics.ContainsKey("partesAbajo")) {
@@ -69,6 +71,7 @@ namespace DressDoll
                     }
                           
                 }
+                synth.Speak("me voy");
 
                 if (semantics.ContainsKey("Quitar")) { }
             }
@@ -145,45 +148,24 @@ namespace DressDoll
             //EN PROCESO
             GrammarBuilder poner = "Poner";
             GrammarBuilder cambiar = "Cambiar";
-            GrammarBuilder quitar = "Quitar";
-            GrammarBuilder ir = "Ir";
 
-            SemanticResultKey ponerKey = new SemanticResultKey("Poner", poner);
-            SemanticResultKey cambiarKey = new SemanticResultKey("Cambiar", cambiar);
-            SemanticResultKey quitarKey = new SemanticResultKey("Quitar", quitar);
-            SemanticResultKey irKey = new SemanticResultKey("Ir", ir);
+            Choices cambiarAlternativa = new Choices(poner, cambiar);           
+            //Frases posibles
 
-            Choices alternativas = new Choices(poner, cambiar);
-            //Choices alternativas = new Choices(poner, cambiar,quitar, ir);
+            GrammarBuilder cambiarFrase = new GrammarBuilder(cambiarAlternativa);
+            //.Append(colorElement);
 
-            GrammarBuilder frase = new GrammarBuilder(alternativas);
+            GrammarBuilder quitarFrase = new GrammarBuilder("Quitar");
+            //setPhrase.Append(colorElement);
 
-            //HACER FRASE CON LA GRAMATICA ESTABLECIDA
-            if (alternativas != null) {
-                frase = new GrammarBuilder(alternativas);
-            } else if (true) {
+            GrammarBuilder fondoFrase = new GrammarBuilder("Ir a");
 
-            }
-            else { }
-           
-
-            // FIN DEL PROCESO
-
-            if(partesArriba != null) { frase.Append(partesArriba);}
-
-            if (partesAbajo != null) { frase.Append(partesAbajo); }
-            
-
-            Grammar grammar = new Grammar(frase);
+            Choices opcionesFrase = new Choices(new GrammarBuilder[] {cambiarFrase, quitarFrase, fondoFrase});
+            Grammar grammar = new Grammar((GrammarBuilder)opcionesFrase);
             grammar.Name = "Poner/Cambiar";
-            
-
-            //Grammar grammar = new Grammar("so.xml.txt");
-
             return grammar;
 
-
-
+            //Grammar grammar = new Grammar("so.xml.txt");
         }
 
     }

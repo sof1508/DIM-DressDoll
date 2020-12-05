@@ -8,23 +8,32 @@ namespace DressDoll
 {
     class Doll
     {
-        public string ParteArriba { get; set; }
-        public string ParteAbajo{ get; set; }
-        public string Zapatos { get; set; }
-        public string ParteEntera{ get; set; }
+        public string[] RopaPuesta = new string[4];
 
-        public Doll(String parteArriba, String parteAbajo, String zapatos, String parteEntera) {
-            ParteArriba = parteArriba;
-            ParteAbajo = parteAbajo;
-            Zapatos = zapatos;
-            ParteEntera = parteEntera;
+        public Doll(String[] ropaActual) {
+            RopaPuesta = ropaActual;
+            //0 parte Arriba
+            //1 parte Abajo
+            //2 Zapatos
+            //3 Prenda Entera
+
         }
 
-        //METODO PARA VER QUE ROPA LLEVA POR EJEMPLO SI TIEN FALDA Y QUIERO UN VESTIDO PUES TENDRE QUE SABERLO
-       /* public bool consultarRopa(String ropaPuesta) {
-
-            return false;
+        public bool conflictoRopa(String[] ropaActual, String prendaPoner) {
+            bool conflicto = false;
+            switch (prendaPoner) {
+                case "ParteArriba":
+                    if (ropaActual[3] != "" ) conflicto = true;
+                    break;
+                case "ParteAbajo":
+                    if (ropaActual[3] != "") conflicto = true;
+                    break;
+                case "ParteEntera":
+                    if (ropaActual[0] != "" || ropaActual[1] != "") conflicto = true;
+                    break;
+            }
+            return conflicto;
         }
-       */
+   
     }
 }
