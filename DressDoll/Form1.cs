@@ -101,7 +101,12 @@ namespace DressDoll
             partesAbajoChoice.Add(resultValueBuilder);
 
             choiceResultValue =
-                   new SemanticResultValue("Pantalón", "Autumn Pants");
+                   new SemanticResultValue("Pantalón", "Autumn_Pants");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            partesAbajoChoice.Add(resultValueBuilder);
+
+            choiceResultValue =
+                   new SemanticResultValue("Shorts", "Summer_Shorts");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesAbajoChoice.Add(resultValueBuilder);
             // Fin partes de abajo
@@ -111,11 +116,11 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("Chaqueta", "Spring Jacket");
+            choiceResultValue = new SemanticResultValue("Chaqueta", "Spring_Jacket");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("Abrigo", "Autumn Coat");
+            choiceResultValue = new SemanticResultValue("Abrigo", "Autumn_Coat");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
             // Fin partes de arriba
@@ -128,6 +133,14 @@ namespace DressDoll
             choiceResultValue = new SemanticResultValue("Festivo", "TrajeFestivo");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
+
+            choiceResultValue = new SemanticResultValue("Bañador", "Summer_Swimsuit_1");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            parteEnteraChoice.Add(resultValueBuilder);
+
+            choiceResultValue = new SemanticResultValue("Bikini", "Summer_Swimsuit_2");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            parteEnteraChoice.Add(resultValueBuilder);
             // Fin partes enteras
 
             // Zapatos
@@ -135,7 +148,7 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("Botas", "Autumn Boots");
+            choiceResultValue = new SemanticResultValue("Botas", "Autumn_Boots");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
             // Fin zapatos

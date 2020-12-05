@@ -55,7 +55,7 @@ namespace DressDoll
             // parteEntera
             // 
             this.parteEntera.BackColor = System.Drawing.Color.Transparent;
-            this.parteEntera.Location = new System.Drawing.Point(169, 45);
+            this.parteEntera.Location = new System.Drawing.Point(169, 184);
             this.parteEntera.Name = "parteEntera";
             this.parteEntera.Size = new System.Drawing.Size(376, 734);
             this.parteEntera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -65,7 +65,7 @@ namespace DressDoll
             // zapatos
             // 
             this.zapatos.BackColor = System.Drawing.Color.Transparent;
-            this.zapatos.Location = new System.Drawing.Point(169, 45);
+            this.zapatos.Location = new System.Drawing.Point(169, 184);
             this.zapatos.Name = "zapatos";
             this.zapatos.Size = new System.Drawing.Size(376, 734);
             this.zapatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,7 +75,7 @@ namespace DressDoll
             // parteAbajo
             // 
             this.parteAbajo.BackColor = System.Drawing.Color.Transparent;
-            this.parteAbajo.Location = new System.Drawing.Point(169, 45);
+            this.parteAbajo.Location = new System.Drawing.Point(169, 184);
             this.parteAbajo.Name = "parteAbajo";
             this.parteAbajo.Size = new System.Drawing.Size(376, 734);
             this.parteAbajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,7 +85,7 @@ namespace DressDoll
             // parteArriba
             // 
             this.parteArriba.BackColor = System.Drawing.Color.Transparent;
-            this.parteArriba.Location = new System.Drawing.Point(169, 45);
+            this.parteArriba.Location = new System.Drawing.Point(169, 184);
             this.parteArriba.Name = "parteArriba";
             this.parteArriba.Size = new System.Drawing.Size(376, 734);
             this.parteArriba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,7 +96,7 @@ namespace DressDoll
             // 
             this.cuerpo.BackColor = System.Drawing.Color.Transparent;
             this.cuerpo.Image = ((System.Drawing.Image)(resources.GetObject("cuerpo.Image")));
-            this.cuerpo.Location = new System.Drawing.Point(169, 45);
+            this.cuerpo.Location = new System.Drawing.Point(169, 184);
             this.cuerpo.Name = "cuerpo";
             this.cuerpo.Size = new System.Drawing.Size(376, 734);
             this.cuerpo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -108,7 +108,7 @@ namespace DressDoll
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(699, 791);
+            this.ClientSize = new System.Drawing.Size(699, 884);
             this.Controls.Add(this.parteEntera);
             this.Controls.Add(this.zapatos);
             this.Controls.Add(this.parteAbajo);
@@ -154,7 +154,7 @@ namespace DressDoll
             parteEntera.Image = DressDoll.Properties.Resources.Winter_Dress;
             parteEntera.Image = DressDoll.Properties.Resources.TrajeFestivo;
           */
-           // this.BackgroundImage = DressDoll.Properties.Resources.parque;
+            // this.BackgroundImage = DressDoll.Properties.Resources.parque;
         }
         #endregion
 
