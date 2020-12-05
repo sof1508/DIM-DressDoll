@@ -53,6 +53,19 @@ namespace DressDoll
             string rawText = e.Result.Text;
             RecognitionResult result = e.Result;
 
+            if (semantics.ContainsKey("Lugares")) {
+                synth.Speak("entrando a lugar");
+                String lugar = ((string)semantics["Lugares"].Value);
+                switch (lugar) {
+                    case "playa": 
+                        this.BackgroundImage = DressDoll.Properties.Resources.playa;
+                        break;
+                    case "parque":
+                        this.BackgroundImage = DressDoll.Properties.Resources.parque;
+                        break;
+                }
+            } 
+
            /* if (!semantics.ContainsKey("rgb"))
             {
                 this.label1.Text = "No info provided.";
@@ -89,35 +102,35 @@ namespace DressDoll
             // Fin partes de abajo
 
             // Partes de arriba 
-            new SemanticResultValue("Camiseta", "");
+            choiceResultValue = new SemanticResultValue("Camiseta", "Spring_Cardigan");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
 
-            new SemanticResultValue("Chaqueta", "Spring Jacket");
+            choiceResultValue = new SemanticResultValue("Chaqueta", "Spring Jacket");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
 
-            new SemanticResultValue("Abrigo", "Autumn Coat");
+            choiceResultValue = new SemanticResultValue("Abrigo", "Autumn Coat");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
             // Fin partes de arriba
 
             // Partes entera
-            new SemanticResultValue("Vestido", "");
+            choiceResultValue = new SemanticResultValue("Vestido", "Summer_Dress");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
 
-            new SemanticResultValue("Festivo", "");
+            choiceResultValue = new SemanticResultValue("Festivo", "TrajeFestivo");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
             // Fin partes enteras
 
             // Zapatos
-            new SemanticResultValue("Zapatos", "");
+            choiceResultValue = new SemanticResultValue("Zapatos", "Summer_Shoes");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
 
-            new SemanticResultValue("Botas", "");
+            choiceResultValue = new SemanticResultValue("Botas", "Autumn Boots");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
             // Fin zapatos
@@ -140,7 +153,7 @@ namespace DressDoll
             //Opciones de lugares para ir
             Choices lugaresChoice = new Choices();
             choiceResultValue =
-                   new SemanticResultValue("Pasear", "");
+                   new SemanticResultValue("Pasear", "parque");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             lugaresChoice.Add(resultValueBuilder);
 
