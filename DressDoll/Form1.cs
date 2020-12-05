@@ -55,7 +55,22 @@ namespace DressDoll
 
             if (!semantics.ContainsKey("Lugares"))
             {
-               
+                if (!semantics.ContainsKey("Cambiar"))
+                {
+
+                }
+                else {
+                    synth.Speak("entrando a cambiar");
+                    String ropa = ((string)semantics["partesAbajo"].Value);
+                    switch (ropa)
+                    {
+                        case "Summer_Skirt":
+                            parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
+                            break;
+
+                    }
+
+                }
             }
             else {
                 synth.Speak("entrando a lugar");
@@ -188,9 +203,9 @@ namespace DressDoll
             GrammarBuilder poner = "Poner";
             GrammarBuilder cambiar = "Cambiar";
 
-            Choices cambiarAlternativa = new Choices(poner, cambiar);           
-            
-            GrammarBuilder cambiarFrase = new GrammarBuilder(cambiarAlternativa);
+            Choices cambiarAlternativa = new Choices(poner, cambiar);   
+            SemanticResultKey choiceResultKeyCambiar = new SemanticResultKey("Cambiar", cambiarAlternativa);
+            GrammarBuilder cambiarFrase = new GrammarBuilder(choiceResultKeyCambiar);
             cambiarFrase.Append(opcionesRopa);
 
             GrammarBuilder quitarFrase = new GrammarBuilder("Quitar");
