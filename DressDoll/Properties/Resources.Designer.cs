@@ -103,6 +103,16 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap parque {
+            get {
+                object obj = ResourceManager.GetObject("parque", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pirate_Boy_Costume {
             get {
                 object obj = ResourceManager.GetObject("Pirate_Boy_Costume", resourceCulture);
