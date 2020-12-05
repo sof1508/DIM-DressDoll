@@ -53,18 +53,23 @@ namespace DressDoll
             string rawText = e.Result.Text;
             RecognitionResult result = e.Result;
 
-            if (semantics.ContainsKey("Lugares")) {
+            if (!semantics.ContainsKey("Lugares"))
+            {
+               
+            }
+            else {
                 synth.Speak("entrando a lugar");
                 String lugar = ((string)semantics["Lugares"].Value);
-                switch (lugar) {
-                    case "playa": 
+                switch (lugar)
+                {
+                    case "playa":
                         this.BackgroundImage = DressDoll.Properties.Resources.playa;
                         break;
                     case "parque":
                         this.BackgroundImage = DressDoll.Properties.Resources.parque;
                         break;
                 }
-            } 
+            }
 
            /* if (!semantics.ContainsKey("rgb"))
             {
