@@ -140,7 +140,7 @@ namespace DressDoll
                         switch (ropa)
                         {
                             case "Summer_Dress":
-                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Shoes;
+                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Dress;
                                 break;
                             case "Summer_Swimsuit_1":
                                 parteEntera.Image = DressDoll.Properties.Resources.Summer_Swimsuit_1;
