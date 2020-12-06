@@ -118,8 +118,8 @@ namespace DressDoll
                             case "Summer_Shoes":
                                 zapatos.Image = DressDoll.Properties.Resources.Summer_Shoes;
                                 break;
-                            case "Autumn_Boots":
-                                zapatos.Image = DressDoll.Properties.Resources.Autumn_Boots;
+                            case "Winter_Boots":
+                                zapatos.Image = DressDoll.Properties.Resources.Winter_Boots;
                                 break;
                         }
                         // poner a true  zapatos doll
@@ -152,6 +152,10 @@ namespace DressDoll
                                 parteEntera.Image = DressDoll.Properties.Resources.TrajeFestivo;
                                 this.BackgroundImage = DressDoll.Properties.Resources.navidad;
                                 //musica
+                                System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                                player.SoundLocation = "../../Resources/Jingle Bells.wav";
+                                player.Load();
+                                player.Play();
                                 break;                              
                         }
                         // poner a true  parte Entera doll
@@ -251,7 +255,7 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("Botas", "Autumn_Boots");
+            choiceResultValue = new SemanticResultValue("Botas", "Winter_Boots");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
             // Fin zapatos
