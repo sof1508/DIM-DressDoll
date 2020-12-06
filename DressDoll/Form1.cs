@@ -119,8 +119,31 @@ namespace DressDoll
                         }
                     }
                     else if (semantics.ContainsKey("parteEntera")) 
-                    { 
-                    
+                    {
+                        String ropa = ((string)semantics["parteEntera"].Value);
+                        if (doll.conflictoRopa("ParteEntera"))
+                        {
+                            //quitar parte  Arriba y abajo parteEntera.Image
+                            //poner a false las dos en doll
+                        }
+                        switch (ropa)
+                        {
+                            case "Summer_Dress":
+                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Shoes;
+                                break;
+                            case "Summer_Swimsuit_1":
+                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Swimsuit_1;
+                                break;
+                            case "Summer_Swimsuit_2":
+                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Swimsuit_2;
+                                break;
+                            case "TrajeFestivo":
+                                parteEntera.Image = DressDoll.Properties.Resources.TrajeFestivo;
+                                this.BackgroundImage = DressDoll.Properties.Resources.navidad;
+                                //musica
+                                break;                              
+                        }
+                        // poner a true  parte Entera doll
                     }
 
                 }
