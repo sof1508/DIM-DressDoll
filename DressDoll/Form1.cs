@@ -49,7 +49,9 @@ namespace DressDoll
         {
             //obtenemos un diccionario con los elementos semánticos
             SemanticValue semantics = e.Result.Semantics;
-          
+            String [] ropa = new String
+            doll = new Doll();
+
             string rawText = e.Result.Text;
             RecognitionResult result = e.Result;
 
@@ -61,13 +63,24 @@ namespace DressDoll
                 }
                 else {
                     synth.Speak("entrando a cambiar");
-                    String ropa = ((string)semantics["partesAbajo"].Value);
-                    switch (ropa)
-                    {
-                        case "Summer_Skirt":
-                            parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
-                            break;
+                    if (semantics.ContainsKey("partesAbajo")) { 
+                        String ropa = ((string)semantics["partesAbajo"].Value);
+                        switch (ropa)
+                        {
+                            case "Summer_Skirt":
+                                if (true) { 
+                                
+                                }
+                                parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
+                                break;
+                            case "Autumn_Pants":
+                                parteAbajo.Image = DressDoll.Properties.Resources.Autumn_Pants;
+                                break;
+                            case "Summer_Shorts":
+                                parteAbajo.Image = DressDoll.Properties.Resources.Summer_Shorts;
+                                break;
 
+                        }
                     }
 
                 }
