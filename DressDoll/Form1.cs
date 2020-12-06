@@ -18,7 +18,7 @@ namespace DressDoll
         private SpeechSynthesizer synth = new SpeechSynthesizer();
 
         /* VARIABLES GLOBALES */
-        Doll doll;
+        Doll doll = new Doll(false,false,false,false);
 
         public Form1()
         {
@@ -49,9 +49,7 @@ namespace DressDoll
         {
             //obtenemos un diccionario con los elementos semánticos
             SemanticValue semantics = e.Result.Semantics;
-            String [] ropa = new String
-            doll = new Doll();
-
+            
             string rawText = e.Result.Text;
             RecognitionResult result = e.Result;
 
@@ -59,18 +57,21 @@ namespace DressDoll
             {
                 if (!semantics.ContainsKey("Cambiar"))
                 {
-
+                    // if quitar
                 }
                 else {
                     synth.Speak("entrando a cambiar");
-                    if (semantics.ContainsKey("partesAbajo")) { 
+                    if (semantics.ContainsKey("partesAbajo"))
+                    {
                         String ropa = ((string)semantics["partesAbajo"].Value);
+                        if (doll.conflictoRopa("ParteAbajo"))
+                        {
+                            //quitar parte parteEntera.Image
+                            //poner a false en doll
+                        }
                         switch (ropa)
                         {
                             case "Summer_Skirt":
-                                if (true) { 
-                                
-                                }
                                 parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
                                 break;
                             case "Autumn_Pants":
@@ -79,8 +80,47 @@ namespace DressDoll
                             case "Summer_Shorts":
                                 parteAbajo.Image = DressDoll.Properties.Resources.Summer_Shorts;
                                 break;
-
                         }
+                        //poner a true  parte Abajo doll
+                    }
+                    else if (semantics.ContainsKey("partesArriba"))
+                    {
+                        String ropa = ((string)semantics["partesArriba"].Value);
+                        if (doll.conflictoRopa("ParteArriba"))
+                        {
+                            //quitar parte parteEntera.Image
+                            //poner a false en doll
+                        }
+                        switch (ropa)
+                        {
+                            case "Spring_Cardigan":
+                                parteArriba.Image = DressDoll.Properties.Resources.Spring_Cardigan;
+                                break;
+                            case "Spring_Jacket":
+                                parteArriba.Image = DressDoll.Properties.Resources.Spring_Jacket;
+                                break;
+                            case "Autumn_Coat":
+                                parteArriba.Image = DressDoll.Properties.Resources.Autumn_Coat;
+                                break;
+                        }
+                        //poner a true  parte Arriba doll
+                    }
+                    else if (semantics.ContainsKey("zapatos"))
+                    {
+                        String ropa = ((string)semantics["zapatos"].Value);
+                        switch (ropa)
+                        {
+                            case "Summer_Shoes":
+                                zapatos.Image = DressDoll.Properties.Resources.Summer_Shoes;
+                                break;
+                            case "Autumn_Boots":
+                                zapatos.Image = DressDoll.Properties.Resources.Autumn_Boots;
+                                break;
+                        }
+                    }
+                    else if (semantics.ContainsKey("parteEntera")) 
+                    { 
+                    
                     }
 
                 }
