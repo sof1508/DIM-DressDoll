@@ -8,10 +8,11 @@ namespace DressDoll
 {
     class Doll
     {
-        public bool ParteArriba;
-        public bool ParteAbajo;
-        public bool Zapatos;
-        public bool ParteEntera;
+        public bool ParteArriba { get; set; }
+        public bool ParteAbajo { get; set; }
+        public bool Zapatos { get; set; }
+        public bool ParteEntera { get; set; }
+
 
         public Doll(bool parteArriba, bool parteAbajo, bool zapatos, bool parteEntera) {
             ParteArriba = parteArriba;

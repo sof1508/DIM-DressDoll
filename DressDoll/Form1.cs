@@ -67,7 +67,9 @@ namespace DressDoll
                         if (doll.conflictoRopa("ParteAbajo"))
                         {
                             //quitar parte parteEntera.Image
+                            parteEntera.Image = null;
                             //poner a false en doll
+                            doll.ParteEntera = false;
                         }
                         switch (ropa)
                         {
@@ -82,13 +84,15 @@ namespace DressDoll
                                 break;
                         }
                         //poner a true  parte Abajo doll
-                    }
+                        doll.ParteAbajo = true;               
+                        }
                     else if (semantics.ContainsKey("partesArriba"))
                     {
                         String ropa = ((string)semantics["partesArriba"].Value);
                         if (doll.conflictoRopa("ParteArriba"))
                         {
                             //quitar parte parteEntera.Image
+                            parteEntera.Image = null;
                             //poner a false en doll
                         }
                         switch (ropa)
@@ -104,6 +108,7 @@ namespace DressDoll
                                 break;
                         }
                         //poner a true  parte Arriba doll
+                        doll.ParteArriba = true;
                     }
                     else if (semantics.ContainsKey("zapatos"))
                     {
@@ -117,6 +122,8 @@ namespace DressDoll
                                 zapatos.Image = DressDoll.Properties.Resources.Autumn_Boots;
                                 break;
                         }
+                        // poner a true  zapatos doll
+                        doll.Zapatos = true;
                     }
                     else if (semantics.ContainsKey("parteEntera")) 
                     {
@@ -124,7 +131,11 @@ namespace DressDoll
                         if (doll.conflictoRopa("ParteEntera"))
                         {
                             //quitar parte  Arriba y abajo parteEntera.Image
+                            parteArriba.Image = null;
+                            parteAbajo.Image = null;
                             //poner a false las dos en doll
+                            doll.ParteArriba = false;
+                            doll.ParteAbajo = false;
                         }
                         switch (ropa)
                         {
@@ -144,6 +155,7 @@ namespace DressDoll
                                 break;                              
                         }
                         // poner a true  parte Entera doll
+                        doll.ParteEntera = true;
                     }
 
                 }
