@@ -58,7 +58,7 @@ namespace DressDoll
             {
                 if (!semantics.ContainsKey("Cambiar"))
                 {
-                    if (!semantics.ContainsKey("Quitar"))
+                    if (!semantics.ContainsKey("Apagar"))
                     {
 
                     }
@@ -291,7 +291,7 @@ namespace DressDoll
 
 
 
-            Choices opciones = new Choices(new GrammarBuilder[] { partesArriba, partesAbajo, zapatos, partesEnteras, musica});
+            Choices opcionesRopa = new Choices(new GrammarBuilder[] { partesArriba, partesAbajo, zapatos, partesEnteras});
 
             //Opciones de lugares para ir
             Choices lugaresChoice = new Choices();
@@ -316,22 +316,24 @@ namespace DressDoll
             Choices cambiarAlternativa = new Choices(poner, cambiar);   
             SemanticResultKey choiceResultKeyCambiar = new SemanticResultKey("Cambiar", cambiarAlternativa);
             GrammarBuilder cambiarFrase = new GrammarBuilder(choiceResultKeyCambiar);
-            cambiarFrase.Append(opciones);
-
+            cambiarFrase.Append(opcionesRopa);
+            
+            GrammarBuilder quitarFrase = new GrammarBuilder("Quitar");
+            quitarFrase.Append(opcionesRopa);
 
             GrammarBuilder quitar = "Quitar";
             GrammarBuilder apagar = "Apagar";
 
-            Choices quitarAlternativa = new Choices(quitar, apagar);
-            SemanticResultKey choiceResultKeyQuitar = new SemanticResultKey("Quitar", quitarAlternativa);
-            GrammarBuilder quitarFrase = new GrammarBuilder(choiceResultKeyQuitar);
-            quitarFrase.Append(opciones);
+            Choices apagarAlternativa = new Choices(quitar, apagar);
+            SemanticResultKey choiceResultKeyQuitar = new SemanticResultKey("Apagar", apagarAlternativa);
+            GrammarBuilder apagarFrase = new GrammarBuilder(choiceResultKeyQuitar);
+            apagarFrase.Append(musica);
 
 
             GrammarBuilder fondoFrase = new GrammarBuilder("Ir a");
             fondoFrase.Append(lugares);
 
-            Choices opcionesFrase = new Choices(new GrammarBuilder[] {cambiarFrase, quitarFrase, fondoFrase});
+            Choices opcionesFrase = new Choices(new GrammarBuilder[] {cambiarFrase, quitarFrase, apagarFrase, fondoFrase});
             Grammar grammar = new Grammar((GrammarBuilder)opcionesFrase);
             grammar.Name = "Poner/Cambiar";
             return grammar;
