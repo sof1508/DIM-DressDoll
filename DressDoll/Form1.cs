@@ -49,7 +49,7 @@ namespace DressDoll
         {
             //obtenemos un diccionario con los elementos semánticos
             SemanticValue semantics = e.Result.Semantics;
-            
+
             string rawText = e.Result.Text;
             RecognitionResult result = e.Result;
 
@@ -57,7 +57,6 @@ namespace DressDoll
             {
                 if (semantics.ContainsKey("Cambiar"))
                 {
-<<<<<<< HEAD
                     synth.Speak("entrando a cambiar");
                     String ropa = ((string)semantics["partesAbajo"].Value);
                     switch (ropa)
@@ -65,15 +64,15 @@ namespace DressDoll
                         case "Summer_Skirt":
                             parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
                             break;
-=======
-                    if (!semantics.ContainsKey("Apagar"))
-                    {
+                            /*if (!semantics.ContainsKey("Apagar"))
+                            {
 
-                    }
-                    else 
-                    {
-                        if (semantics.ContainsKey("musica"))
-                            player.Stop();
+                            }
+                            else
+                            {
+                                if (semantics.ContainsKey("musica"))
+                                    player.Stop();
+                            }*/
                     }
                 }
                 else {
@@ -100,8 +99,8 @@ namespace DressDoll
                                 break;
                         }
                         //poner a true  parte Abajo doll
-                        doll.ParteAbajo = true;               
-                        }
+                        doll.ParteAbajo = true;
+                    }
                     else if (semantics.ContainsKey("partesArriba"))
                     {
                         String ropa = ((string)semantics["partesArriba"].Value);
@@ -141,7 +140,7 @@ namespace DressDoll
                         // poner a true  zapatos doll
                         doll.Zapatos = true;
                     }
-                    else if (semantics.ContainsKey("parteEntera")) 
+                    else if (semantics.ContainsKey("parteEntera"))
                     {
                         String ropa = ((string)semantics["parteEntera"].Value);
                         if (doll.conflictoRopa("ParteEntera"))
@@ -181,34 +180,34 @@ namespace DressDoll
                                 player.Play();
                                 break;
 
-                                
+
                         }
                         // poner a true  parte Entera doll
                         doll.ParteEntera = true;
->>>>>>> 058a917fd2609fb8d06dfea6493c96d25c90c965
                     }
-                } else if (!semantics.ContainsKey("Quitar"))
-                {
-                    synth.Speak("entrando a quitar");
-                    String ropa = ((string)semantics["parte de abajo"].Value);
-                    switch (ropa)
+                    else if (!semantics.ContainsKey("Quitar"))
                     {
-                        case "1":
-                            parteAbajo.Image = null;
-                            break;
+                        synth.Speak("entrando a quitar");
+                        String ropa = ((string)semantics["parte de abajo"].Value);
+                        switch (ropa)
+                        {
+                            case "1":
+                                parteAbajo.Image = null;
+                                break;
+                        }
                     }
                 }
-            }
-            else {
-                String lugar = ((string)semantics["Lugares"].Value);
-                switch (lugar)
-                {
-                    case "playa":
-                        this.BackgroundImage = DressDoll.Properties.Resources.playa;
-                        break;
-                    case "parque":
-                        this.BackgroundImage = DressDoll.Properties.Resources.parque;
-                        break;
+                else {
+                    String lugar = ((string)semantics["Lugares"].Value);
+                    switch (lugar)
+                    {
+                        case "playa":
+                            this.BackgroundImage = DressDoll.Properties.Resources.playa;
+                            break;
+                        case "parque":
+                            this.BackgroundImage = DressDoll.Properties.Resources.parque;
+                            break;
+                    }
                 }
             }
         }
@@ -309,7 +308,6 @@ namespace DressDoll
 
 
 
-<<<<<<< HEAD
             //GB para quitar la ropa
             GrammarBuilder qpArriba = new GrammarBuilder(new SemanticResultValue("parte de arriba", 0));
             GrammarBuilder qpAbajo  = new GrammarBuilder(new SemanticResultValue("parte de abajo", 1));
@@ -317,9 +315,7 @@ namespace DressDoll
             GrammarBuilder qAtuendo = new GrammarBuilder(new SemanticResultValue("atuendo", 4));
 
             Choices qRopa = new Choices(new GrammarBuilder[] { qpArriba, qpAbajo, qZapatos, qAtuendo });
-=======
             Choices opcionesRopa = new Choices(new GrammarBuilder[] { partesArriba, partesAbajo, zapatos, partesEnteras});
->>>>>>> 058a917fd2609fb8d06dfea6493c96d25c90c965
 
             //Opciones de lugares para ir
             Choices lugaresChoice = new Choices();
