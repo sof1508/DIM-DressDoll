@@ -197,17 +197,18 @@ namespace DressDoll
                         }
                     }
                 }
-                else {
-                    String lugar = ((string)semantics["Lugares"].Value);
-                    switch (lugar)
-                    {
-                        case "playa":
-                            this.BackgroundImage = DressDoll.Properties.Resources.playa;
-                            break;
-                        case "parque":
-                            this.BackgroundImage = DressDoll.Properties.Resources.parque;
-                            break;
-                    }
+            }
+            else
+            {
+                String lugar = ((string)semantics["Lugares"].Value);
+                switch (lugar)
+                {
+                    case "playa":
+                        this.BackgroundImage = DressDoll.Properties.Resources.playa;
+                        break;
+                    case "parque":
+                        this.BackgroundImage = DressDoll.Properties.Resources.parque;
+                        break;
                 }
             }
         }
