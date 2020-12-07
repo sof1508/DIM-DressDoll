@@ -18,7 +18,8 @@ namespace DressDoll
         private SpeechSynthesizer synth = new SpeechSynthesizer();
 
         /* VARIABLES GLOBALES */
-        Doll doll;
+        Doll doll = new Doll(false,false,false,false);
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 
         public Form1()
         {
@@ -48,7 +49,7 @@ namespace DressDoll
         {
             //obtenemos un diccionario con los elementos semánticos
             SemanticValue semantics = e.Result.Semantics;
-          
+            
             string rawText = e.Result.Text;
             RecognitionResult result = e.Result;
 
@@ -56,6 +57,7 @@ namespace DressDoll
             {
                 if (semantics.ContainsKey("Cambiar"))
                 {
+<<<<<<< HEAD
                     synth.Speak("entrando a cambiar");
                     String ropa = ((string)semantics["partesAbajo"].Value);
                     switch (ropa)
@@ -63,6 +65,127 @@ namespace DressDoll
                         case "Summer_Skirt":
                             parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
                             break;
+=======
+                    if (!semantics.ContainsKey("Apagar"))
+                    {
+
+                    }
+                    else 
+                    {
+                        if (semantics.ContainsKey("musica"))
+                            player.Stop();
+                    }
+                }
+                else {
+                    if (semantics.ContainsKey("partesAbajo"))
+                    {
+                        String ropa = ((string)semantics["partesAbajo"].Value);
+                        if (doll.conflictoRopa("ParteAbajo"))
+                        {
+                            //quitar parte parteEntera.Image
+                            parteEntera.Image = null;
+                            //poner a false en doll
+                            doll.ParteEntera = false;
+                        }
+                        switch (ropa)
+                        {
+                            case "Summer_Skirt":
+                                parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
+                                break;
+                            case "Autumn_Pants":
+                                parteAbajo.Image = DressDoll.Properties.Resources.Autumn_Pants;
+                                break;
+                            case "Summer_Shorts":
+                                parteAbajo.Image = DressDoll.Properties.Resources.Summer_Shorts;
+                                break;
+                        }
+                        //poner a true  parte Abajo doll
+                        doll.ParteAbajo = true;               
+                        }
+                    else if (semantics.ContainsKey("partesArriba"))
+                    {
+                        String ropa = ((string)semantics["partesArriba"].Value);
+                        if (doll.conflictoRopa("ParteArriba"))
+                        {
+                            //quitar parte parteEntera.Image
+                            parteEntera.Image = null;
+                            //poner a false en doll
+                        }
+                        switch (ropa)
+                        {
+                            case "Spring_Cardigan":
+                                parteArriba.Image = DressDoll.Properties.Resources.Spring_Cardigan;
+                                break;
+                            case "Spring_Jacket":
+                                parteArriba.Image = DressDoll.Properties.Resources.Spring_Jacket;
+                                break;
+                            case "Autumn_Coat":
+                                parteArriba.Image = DressDoll.Properties.Resources.Autumn_Coat;
+                                break;
+                        }
+                        //poner a true  parte Arriba doll
+                        doll.ParteArriba = true;
+                    }
+                    else if (semantics.ContainsKey("zapatos"))
+                    {
+                        String ropa = ((string)semantics["zapatos"].Value);
+                        switch (ropa)
+                        {
+                            case "Summer_Shoes":
+                                zapatos.Image = DressDoll.Properties.Resources.Summer_Shoes;
+                                break;
+                            case "Winter_Boots":
+                                zapatos.Image = DressDoll.Properties.Resources.Winter_Boots;
+                                break;
+                        }
+                        // poner a true  zapatos doll
+                        doll.Zapatos = true;
+                    }
+                    else if (semantics.ContainsKey("parteEntera")) 
+                    {
+                        String ropa = ((string)semantics["parteEntera"].Value);
+                        if (doll.conflictoRopa("ParteEntera"))
+                        {
+                            //quitar parte  Arriba y abajo parteEntera.Image
+                            parteArriba.Image = null;
+                            parteAbajo.Image = null;
+                            //poner a false las dos en doll
+                            doll.ParteArriba = false;
+                            doll.ParteAbajo = false;
+                        }
+                        switch (ropa)
+                        {
+                            case "Summer_Dress":
+                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Dress;
+                                break;
+                            case "Summer_Swimsuit_1":
+                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Swimsuit_1;
+                                break;
+                            case "Summer_Swimsuit_2":
+                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Swimsuit_2;
+                                break;
+                            case "TrajeFestivo":
+                                parteEntera.Image = DressDoll.Properties.Resources.TrajeFestivo;
+                                this.BackgroundImage = DressDoll.Properties.Resources.navidad;
+                                //musica
+                                player.SoundLocation = "../../Resources/Jingle Bells.wav";
+                                player.Load();
+                                player.Play();
+                                break;
+                            case "Pirate_Boy_Costume":
+                                parteEntera.Image = DressDoll.Properties.Resources.Pirate_Boy_Costume;
+                                this.BackgroundImage = DressDoll.Properties.Resources.playa;
+                                //musica
+                                player.SoundLocation = "../../Resources/pirata.wav";
+                                player.Load();
+                                player.Play();
+                                break;
+
+                                
+                        }
+                        // poner a true  parte Entera doll
+                        doll.ParteEntera = true;
+>>>>>>> 058a917fd2609fb8d06dfea6493c96d25c90c965
                     }
                 } else if (!semantics.ContainsKey("Quitar"))
                 {
@@ -77,7 +200,6 @@ namespace DressDoll
                 }
             }
             else {
-                synth.Speak("entrando a lugar");
                 String lugar = ((string)semantics["Lugares"].Value);
                 switch (lugar)
                 {
@@ -99,6 +221,7 @@ namespace DressDoll
             Choices partesArribaChoice = new Choices();
             Choices parteEnteraChoice = new Choices();
             Choices zapatosChoice = new Choices();
+            Choices musicaChoice = new Choices();
 
             // Partes de abajo 
             SemanticResultValue choiceResultValue =
@@ -140,6 +263,10 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
 
+            choiceResultValue = new SemanticResultValue("Disfraz", "Pirate_Boy_Costume");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            parteEnteraChoice.Add(resultValueBuilder);
+
             choiceResultValue = new SemanticResultValue("Bañador", "Summer_Swimsuit_1");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
@@ -154,25 +281,35 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("Botas", "Autumn_Boots");
+            choiceResultValue = new SemanticResultValue("Botas", "Winter_Boots");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
             // Fin zapatos
 
-            //Creación de palabras claves ropa
+            // Música
+            choiceResultValue = new SemanticResultValue("Música", "musica");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            musicaChoice.Add(resultValueBuilder);
+            // Fin música
+
+            //Creación de palabras claves 
             SemanticResultKey choiceResultKeyArriba = new SemanticResultKey("partesArriba", partesArribaChoice);
             SemanticResultKey choiceResultKeyAbajo = new SemanticResultKey("partesAbajo", partesAbajoChoice);
             SemanticResultKey choiceResultKeyZapatos = new SemanticResultKey("zapatos", zapatosChoice);
             SemanticResultKey choiceResultKeyEntero = new SemanticResultKey("parteEntera", parteEnteraChoice);
-            
-            //Creación de grammarbuilder ropa
+            SemanticResultKey choiceResultKeyMusica = new SemanticResultKey("musica", musicaChoice);
+
+
+            //Creación de grammarbuilder 
             GrammarBuilder partesArriba = new GrammarBuilder(choiceResultKeyArriba);
             GrammarBuilder partesAbajo = new GrammarBuilder(choiceResultKeyAbajo);
             GrammarBuilder zapatos = new GrammarBuilder(choiceResultKeyZapatos);
             GrammarBuilder partesEnteras = new GrammarBuilder(choiceResultKeyEntero);
+            GrammarBuilder musica = new GrammarBuilder(choiceResultKeyMusica);
 
-            Choices opcionesRopa = new Choices(new GrammarBuilder[] { partesArriba, partesAbajo, zapatos, partesEnteras });
 
+
+<<<<<<< HEAD
             //GB para quitar la ropa
             GrammarBuilder qpArriba = new GrammarBuilder(new SemanticResultValue("parte de arriba", 0));
             GrammarBuilder qpAbajo  = new GrammarBuilder(new SemanticResultValue("parte de abajo", 1));
@@ -180,6 +317,9 @@ namespace DressDoll
             GrammarBuilder qAtuendo = new GrammarBuilder(new SemanticResultValue("atuendo", 4));
 
             Choices qRopa = new Choices(new GrammarBuilder[] { qpArriba, qpAbajo, qZapatos, qAtuendo });
+=======
+            Choices opcionesRopa = new Choices(new GrammarBuilder[] { partesArriba, partesAbajo, zapatos, partesEnteras});
+>>>>>>> 058a917fd2609fb8d06dfea6493c96d25c90c965
 
             //Opciones de lugares para ir
             Choices lugaresChoice = new Choices();
@@ -205,14 +345,23 @@ namespace DressDoll
             SemanticResultKey choiceResultKeyCambiar = new SemanticResultKey("Cambiar", cambiarAlternativa);
             GrammarBuilder cambiarFrase = new GrammarBuilder(choiceResultKeyCambiar);
             cambiarFrase.Append(opcionesRopa);
-
+            
             GrammarBuilder quitarFrase = new GrammarBuilder("Quitar");
             quitarFrase.Append(qRopa);
+
+            GrammarBuilder quitar = "Quitar";
+            GrammarBuilder apagar = "Apagar";
+
+            Choices apagarAlternativa = new Choices(quitar, apagar);
+            SemanticResultKey choiceResultKeyQuitar = new SemanticResultKey("Apagar", apagarAlternativa);
+            GrammarBuilder apagarFrase = new GrammarBuilder(choiceResultKeyQuitar);
+            apagarFrase.Append(musica);
+
 
             GrammarBuilder fondoFrase = new GrammarBuilder("Ir a");
             fondoFrase.Append(lugares);
 
-            Choices opcionesFrase = new Choices(new GrammarBuilder[] {cambiarFrase, quitarFrase, fondoFrase});
+            Choices opcionesFrase = new Choices(new GrammarBuilder[] {cambiarFrase, quitarFrase, apagarFrase, fondoFrase});
             Grammar grammar = new Grammar((GrammarBuilder)opcionesFrase);
             grammar.Name = "Poner/Cambiar";
             return grammar;

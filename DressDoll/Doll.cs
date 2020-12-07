@@ -8,28 +8,30 @@ namespace DressDoll
 {
     class Doll
     {
-        public string[] RopaPuesta = new string[4];
+        public bool ParteArriba { get; set; }
+        public bool ParteAbajo { get; set; }
+        public bool Zapatos { get; set; }
+        public bool ParteEntera { get; set; }
 
-        public Doll(String[] ropaActual) {
-            RopaPuesta = ropaActual;
-            //0 parte Arriba
-            //1 parte Abajo
-            //2 Zapatos
-            //3 Prenda Entera
 
+        public Doll(bool parteArriba, bool parteAbajo, bool zapatos, bool parteEntera) {
+            ParteArriba = parteArriba;
+            ParteAbajo = parteAbajo;
+            Zapatos = zapatos;
+            ParteEntera = parteEntera;
         }
 
-        public bool conflictoRopa(String[] ropaActual, String prendaPoner) {
+        public bool conflictoRopa(String prendaPoner) {
             bool conflicto = false;
             switch (prendaPoner) {
                 case "ParteArriba":
-                    if (ropaActual[3] != "" ) conflicto = true;
+                    if (this.ParteEntera) conflicto = true;
                     break;
                 case "ParteAbajo":
-                    if (ropaActual[3] != "") conflicto = true;
+                    if (this.ParteEntera) conflicto = true;
                     break;
                 case "ParteEntera":
-                    if (ropaActual[0] != "" || ropaActual[1] != "") conflicto = true;
+                    if (this.ParteArriba || this.ParteAbajo) conflicto = true;
                     break;
             }
             return conflicto;
