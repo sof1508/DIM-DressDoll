@@ -171,21 +171,31 @@ namespace DressDoll
                                 player.Load();
                                 player.Play();
                                 break;
-
-
                         }
                         // poner a true  parte Entera doll
                         doll.ParteEntera = true;
                     }
-                    else if (!semantics.ContainsKey("remove"))
+                    else if (!semantics.ContainsKey("Quitar"))
+                    {
+                        
+                    } else
                     {
                         synth.Speak("entrando a quitar");
-                        String ropa = ((string)semantics["remove"].Value);
-                        switch (ropa)
+                        if (semantics.ContainsKey("parte de arriba"))
                         {
-                            case "1":
-                                parteAbajo.Image = null;
-                                break;
+                            parteArriba.Image = null;
+                        }
+                        else if (semantics.ContainsKey("parte de abajo"))
+                        {
+                            parteAbajo.Image = null;
+                        }
+                        else if (semantics.ContainsKey("zapatos"))
+                        {
+                            zapatos.Image = null;
+                        }
+                        else if (semantics.ContainsKey("atuendo"))
+                        {
+                            parteEntera.Image = null;
                         }
                     }
                 }
@@ -229,6 +239,10 @@ namespace DressDoll
                    new SemanticResultValue("Shorts", "Summer_Shorts");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesAbajoChoice.Add(resultValueBuilder);
+
+            choiceResultValue = new SemanticResultValue("parte de abajo", "ParteAbajo");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            partesAbajoChoice.Add(resultValueBuilder);
             // Fin partes de abajo
 
             // Partes de arriba 
@@ -243,6 +257,10 @@ namespace DressDoll
             choiceResultValue = new SemanticResultValue("Abrigo", "Autumn_Coat");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
+
+            choiceResultValue = new SemanticResultValue("parte de arriba", "ParteArriba");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            partesAbajoChoice.Add(resultValueBuilder);
             // Fin partes de arriba
 
             // Partes entera
@@ -265,6 +283,10 @@ namespace DressDoll
             choiceResultValue = new SemanticResultValue("Bikini", "Summer_Swimsuit_2");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
+
+            choiceResultValue = new SemanticResultValue("atuendo", "ParteEntera");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            partesAbajoChoice.Add(resultValueBuilder);
             // Fin partes enteras
 
             // Zapatos
@@ -275,6 +297,10 @@ namespace DressDoll
             choiceResultValue = new SemanticResultValue("Botas", "Winter_Boots");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
+
+            choiceResultValue = new SemanticResultValue("atuendo", "ParteEntera");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            partesAbajoChoice.Add(resultValueBuilder);
             // Fin zapatos
 
             // Música
@@ -337,12 +363,11 @@ namespace DressDoll
             GrammarBuilder cambiarFrase = new GrammarBuilder(choiceResultKeyCambiar);
             cambiarFrase.Append(opcionesRopa);
 
-            GrammarBuilder quitarFrase = new GrammarBuilder("Quitar");
-            quitarFrase.Append(quitarRopa);
-
             GrammarBuilder quitar = "Quitar";
-            GrammarBuilder apagar = "Apagar";
+            GrammarBuilder quitarFrase = new GrammarBuilder(new SemanticResultKey("Quitar", new Choices(quitar)));
+            quitarFrase.Append(opcionesRopa);
 
+            GrammarBuilder apagar = "Apagar";
             Choices apagarAlternativa = new Choices(quitar, apagar);
             SemanticResultKey choiceResultKeyQuitar = new SemanticResultKey("Apagar", apagarAlternativa);
             GrammarBuilder apagarFrase = new GrammarBuilder(choiceResultKeyQuitar);
