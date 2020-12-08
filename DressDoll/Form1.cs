@@ -94,9 +94,11 @@ namespace DressDoll
                             {
                                 case "Chico":
                                     cuerpo.Image = DressDoll.Properties.Resources.Boy;
+                                    ChicaOn = false;
                                     break;
                                 case "Chica":
                                     cuerpo.Image = DressDoll.Properties.Resources.Girl_1;
+                                    ChicaOn = true;
                                     break;
                                 case "Sexo":
                                     if (ChicaOn)
