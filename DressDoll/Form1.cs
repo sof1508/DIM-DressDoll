@@ -19,6 +19,7 @@ namespace DressDoll
 
         /* VARIABLES GLOBALES */
         Doll doll = new Doll(false,false,false,false);
+        bool ChicaOn = true;
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 
         public Form1()
@@ -55,17 +56,46 @@ namespace DressDoll
 
             if (!semantics.ContainsKey("Lugares"))
             {
-                if (!semantics.ContainsKey("Cambiar"))
+                if (!semantics.ContainsKey("Poner"))
                 {
-                            /*if (!semantics.ContainsKey("Apagar"))
+                    if (!semantics.ContainsKey("Apagar"))
+                    {
+                        if (!semantics.ContainsKey("Cambiar"))
+                        { 
+                        
+                        }
+                        else
+                        {
+                            String sexo = ((string)semantics["Sexo"].Value);
+                            synth.Speak("Cambiando " + sexo);
+                            switch (sexo)
                             {
-
+                                case "Chico":
+                                    cuerpo.Image = DressDoll.Properties.Resources.Boy;
+                                    break;
+                                case "Chica":
+                                    cuerpo.Image = DressDoll.Properties.Resources.Girl_1;
+                                    break;
+                                case "Sexo":
+                                    if (ChicaOn)
+                                    {
+                                        cuerpo.Image = DressDoll.Properties.Resources.Boy;
+                                        ChicaOn = false;
+                                    }
+                                    else
+                                    {
+                                        cuerpo.Image = DressDoll.Properties.Resources.Girl_1;
+                                        ChicaOn = true;
+                                    }
+                                    break;
                             }
-                            else
-                            {
-                                if (semantics.ContainsKey("musica"))
-                                    player.Stop();
-                            }*/
+                        }
+                    }
+                    else
+                    {
+                        if (semantics.ContainsKey("musica"))
+                            player.Stop();
+                    }
                 }
                 else {
                     if (semantics.ContainsKey("partesAbajo"))
@@ -82,13 +112,13 @@ namespace DressDoll
                         switch (ropa)
                         {
                             case "Falda":
-                                parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
+                                parteAbajo.Image = DressDoll.Properties.Resources.Falda;
                                 break;
                             case "Pantalones":
-                                parteAbajo.Image = DressDoll.Properties.Resources.Autumn_Pants;
+                                parteAbajo.Image = DressDoll.Properties.Resources.Pantalones;
                                 break;
                             case "Pantalones cortos":
-                                parteAbajo.Image = DressDoll.Properties.Resources.Summer_Shorts;
+                                parteAbajo.Image = DressDoll.Properties.Resources.Shorts;
                                 break;
                         }
                         //poner a true  parte Abajo doll
@@ -107,13 +137,13 @@ namespace DressDoll
                         switch (ropa)
                         {
                             case "Camiseta":
-                                parteArriba.Image = DressDoll.Properties.Resources.Spring_Cardigan;
+                                parteArriba.Image = DressDoll.Properties.Resources.Camiseta;
                                 break;
                             case "Chaqueta":
-                                parteArriba.Image = DressDoll.Properties.Resources.Spring_Jacket;
+                                parteArriba.Image = DressDoll.Properties.Resources.Chaqueta;
                                 break;
                             case "Abrigo":
-                                parteArriba.Image = DressDoll.Properties.Resources.Autumn_Coat;
+                                parteArriba.Image = DressDoll.Properties.Resources.Abrigo;
                                 break;
                         }
                         //poner a true  parte Arriba doll
@@ -126,10 +156,10 @@ namespace DressDoll
                         switch (ropa)
                         {
                             case "Zapatos":
-                                zapatos.Image = DressDoll.Properties.Resources.Summer_Shoes;
+                                zapatos.Image = DressDoll.Properties.Resources.Zapatos;
                                 break;
                             case "Botas":
-                                zapatos.Image = DressDoll.Properties.Resources.Winter_Boots;
+                                zapatos.Image = DressDoll.Properties.Resources.Botas;
                                 break;
                         }
                         // poner a true  zapatos doll
@@ -150,16 +180,16 @@ namespace DressDoll
                         }
                         switch (ropa)
                         {
-                            case "Summer_Dress":
-                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Dress;
+                            case "Vestido":
+                                parteEntera.Image = DressDoll.Properties.Resources.Vestido;
                                 break;
-                            case "Summer_Swimsuit_1":
-                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Swimsuit_1;
+                            case "Bikini":
+                                parteEntera.Image = DressDoll.Properties.Resources.Bikini;
                                 break;
-                            case "Summer_Swimsuit_2":
-                                parteEntera.Image = DressDoll.Properties.Resources.Summer_Swimsuit_2;
+                            case "Bañador":
+                                parteEntera.Image = DressDoll.Properties.Resources.Bañador;
                                 break;
-                            case "TrajeFestivo":
+                            case "Disfraz navideño":
                                 parteEntera.Image = DressDoll.Properties.Resources.TrajeFestivo;
                                 this.BackgroundImage = DressDoll.Properties.Resources.navidad;
                                 //musica
@@ -167,8 +197,8 @@ namespace DressDoll
                                 player.Load();
                                 player.Play();
                                 break;
-                            case "Pirate_Boy_Costume":
-                                parteEntera.Image = DressDoll.Properties.Resources.Pirate_Boy_Costume;
+                            case "Disfraz de pirata":
+                                parteEntera.Image = DressDoll.Properties.Resources.disfraz;
                                 this.BackgroundImage = DressDoll.Properties.Resources.playa;
                                 //musica
                                 player.SoundLocation = "../../Resources/pirata.wav";
@@ -350,14 +380,36 @@ namespace DressDoll
 
             GrammarBuilder lugares = new GrammarBuilder(choiceResultKeyLugares);
 
+
+            //Opciones de sexo
+            Choices sexoChoice = new Choices();
+            choiceResultValue =
+                   new SemanticResultValue("Chico", "Chico");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            sexoChoice.Add(resultValueBuilder);
+
+            choiceResultValue =
+                   new SemanticResultValue("Chica", "Chica");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            sexoChoice.Add(resultValueBuilder);
+
+            choiceResultValue =
+                   new SemanticResultValue("Sexo", "Sexo");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            sexoChoice.Add(resultValueBuilder);
+
+            SemanticResultKey choiceResultKeySexo = new SemanticResultKey("Sexo", sexoChoice);
+
+            GrammarBuilder sexo = new GrammarBuilder(choiceResultKeySexo);
+
             //FRASES
             GrammarBuilder poner = "Poner";
             GrammarBuilder cambiar = "Cambiar";
 
-            Choices cambiarAlternativa = new Choices(poner, cambiar);   
-            SemanticResultKey choiceResultKeyCambiar = new SemanticResultKey("Cambiar", cambiarAlternativa);
-            GrammarBuilder cambiarFrase = new GrammarBuilder(choiceResultKeyCambiar);
-            cambiarFrase.Append(opcionesRopa);
+            Choices ponerAlternativa = new Choices(poner, cambiar);   
+            SemanticResultKey choiceResultKeyPoner = new SemanticResultKey("Poner", ponerAlternativa);
+            GrammarBuilder ponerFrase = new GrammarBuilder(choiceResultKeyPoner);
+            ponerFrase.Append(opcionesRopa);
 
             GrammarBuilder quitar = "Quitar";
             GrammarBuilder quitarFrase = new GrammarBuilder(new SemanticResultKey("Quitar", new Choices(quitar)));
@@ -369,11 +421,18 @@ namespace DressDoll
             GrammarBuilder apagarFrase = new GrammarBuilder(choiceResultKeyQuitar);
             apagarFrase.Append(musica);
 
+            GrammarBuilder cambiarA = "Cambiar a";
+            GrammarBuilder cambiarDe = "Cambiar de";
+            Choices cambiarDeAlternativa = new Choices(cambiarA, cambiarDe);
+            SemanticResultKey choiceResultKeyCambiar = new SemanticResultKey("Cambiar", cambiarDeAlternativa);
+            GrammarBuilder cambiarFrase = new GrammarBuilder(choiceResultKeyCambiar);
+            cambiarFrase.Append(sexo);
+
 
             GrammarBuilder fondoFrase = new GrammarBuilder("Ir a");
             fondoFrase.Append(lugares);
 
-            Choices opcionesFrase = new Choices(new GrammarBuilder[] {cambiarFrase, quitarFrase, apagarFrase, fondoFrase});
+            Choices opcionesFrase = new Choices(new GrammarBuilder[] {ponerFrase, quitarFrase, apagarFrase, fondoFrase, cambiarFrase});
             Grammar grammar = new Grammar((GrammarBuilder)opcionesFrase);
             grammar.Name = "Poner/Cambiar";
             return grammar;

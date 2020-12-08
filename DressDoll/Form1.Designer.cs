@@ -148,13 +148,15 @@ namespace DressDoll
             parteEntera.Location = new Point(0, 0);
             parteEntera.BackColor = Color.Transparent;
 
-            /*parteArriba.Image = DressDoll.Properties.Resources.Spring_Cardigan;
-            parteAbajo.Image = DressDoll.Properties.Resources.Summer_Skirt;
-            zapatos.Image = DressDoll.Properties.Resources.Summer_Sandals;
+            /* Prueba de ropa
+            cuerpo.Image = DressDoll.Properties.Resources.Boy;
+            parteArriba.Image = DressDoll.Properties.Resources.Camiseta;
+            parteAbajo.Image = DressDoll.Properties.Resources.Jeans;
+            zapatos.Image = DressDoll.Properties.Resources.Zapatos;
             parteEntera.Image = DressDoll.Properties.Resources.Winter_Dress;
             parteEntera.Image = DressDoll.Properties.Resources.TrajeFestivo;
-          */
-            // this.BackgroundImage = DressDoll.Properties.Resources.parque;
+            this.BackgroundImage = DressDoll.Properties.Resources.parque;
+            */
         }
         #endregion
 

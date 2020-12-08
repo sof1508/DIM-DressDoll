@@ -116,6 +116,7 @@
     <None Include="Resources\Chaqueta.png" />
     <None Include="Resources\disfraz.png" />
     <None Include="Resources\Falda.png" />
+    <None Include="Resources\Boy.png" />
     <Content Include="Resources\Girl 1.png" />
     <None Include="Resources\Jeans.png" />
     <Content Include="Resources\Jingle Bells.wav" />
