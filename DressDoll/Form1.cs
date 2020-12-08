@@ -260,7 +260,7 @@ namespace DressDoll
 
             choiceResultValue = new SemanticResultValue("parte de arriba", "ParteArriba");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
-            partesAbajoChoice.Add(resultValueBuilder);
+            partesArribaChoice.Add(resultValueBuilder);
             // Fin partes de arriba
 
             // Partes entera
@@ -286,7 +286,7 @@ namespace DressDoll
 
             choiceResultValue = new SemanticResultValue("atuendo", "ParteEntera");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
-            partesAbajoChoice.Add(resultValueBuilder);
+            parteEnteraChoice.Add(resultValueBuilder);
             // Fin partes enteras
 
             // Zapatos
@@ -298,9 +298,9 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("atuendo", "ParteEntera");
+            choiceResultValue = new SemanticResultValue("calzado", "zapatos");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
-            partesAbajoChoice.Add(resultValueBuilder);
+            zapatosChoice.Add(resultValueBuilder);
             // Fin zapatos
 
             // Música
@@ -354,6 +354,7 @@ namespace DressDoll
 
             GrammarBuilder quitarRopa = new GrammarBuilder(new SemanticResultKey("remove", qRopa));
 
+           
             //FRASES
             GrammarBuilder poner = "Poner";
             GrammarBuilder cambiar = "Cambiar";
