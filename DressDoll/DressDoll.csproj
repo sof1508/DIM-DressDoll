@@ -106,50 +106,28 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Abrigo.png" />
-    <Content Include="Resources\Autumn Boots.png" />
-    <Content Include="Resources\Autumn Tights.png" />
-    <Content Include="Resources\Bañador.png" />
-    <Content Include="Resources\Bikini.png" />
-    <Content Include="Resources\Botas.png" />
-    <Content Include="Resources\Boy 1.png" />
-    <Content Include="Resources\Boy 2.png" />
-    <Content Include="Resources\Boy 3.png" />
-    <Content Include="Resources\Boy 4.png" />
-    <Content Include="Resources\Camiseta.png" />
-    <Content Include="Resources\Chaqueta.png" />
-    <Content Include="Resources\Disfraz de pirata.png" />
-    <Content Include="Resources\Disfraz navideño.png" />
-    <Content Include="Resources\Falda.png" />
+    <None Include="Resources\Zapatos.png" />
+    <None Include="Resources\Abrigo.png" />
+    <None Include="Resources\Bañador.png" />
+    <None Include="Resources\Bikini.png" />
+    <None Include="Resources\Blusa.png" />
+    <None Include="Resources\Botas.png" />
+    <None Include="Resources\Camiseta.png" />
+    <None Include="Resources\Chaqueta.png" />
+    <None Include="Resources\disfraz.png" />
+    <None Include="Resources\Falda.png" />
     <Content Include="Resources\Girl 1.png" />
-    <Content Include="Resources\Girl 2.png" />
-    <Content Include="Resources\Girl 3.png" />
-    <Content Include="Resources\Girl 4.png" />
-    <Content Include="Resources\Girl 5.png" />
+    <None Include="Resources\Jeans.png" />
     <Content Include="Resources\Jingle Bells.wav" />
     <Content Include="Resources\navidad.jpg" />
-    <Content Include="Resources\Pantalones cortos.png" />
-    <Content Include="Resources\Pantalones.png" />
+    <None Include="Resources\Pantalones.png" />
     <Content Include="Resources\parque.jpg" />
     <Content Include="Resources\pirata.wav" />
-    <Content Include="Resources\Pirate Girl Costume.png" />
     <Content Include="Resources\playa.jpg" />
-    <Content Include="Resources\Skirt.png" />
-    <Content Include="Resources\Spring Skirt.png" />
-    <Content Include="Resources\Summer_Hat.png" />
-    <Content Include="Resources\Summer_Sandals.png" />
-    <Content Include="Resources\Summer_T-Shirt.png" />
-    <Content Include="Resources\Tights.png" />
-    <Content Include="Resources\Vestido.png" />
-    <Content Include="Resources\Winter boots 2.png" />
-    <Content Include="Resources\winter clothes.png" />
-    <Content Include="Resources\Winter Dress.png" />
-    <Content Include="Resources\Winter Jacket.png" />
-    <Content Include="Resources\Winter Jeans.png" />
-    <Content Include="Resources\Winter Pants.png" />
-    <Content Include="Resources\Winter Scarf and Hat.png" />
-    <Content Include="Resources\Winter Sweater.png" />
-    <Content Include="Resources\Zapatos.png" />
+    <None Include="Resources\Sandalias.png" />
+    <None Include="Resources\Shorts.png" />
+    <None Include="Resources\Vestido.png" />
+    <None Include="Resources\TrajeFestivo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

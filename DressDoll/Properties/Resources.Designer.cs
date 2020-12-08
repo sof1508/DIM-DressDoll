@@ -63,9 +63,9 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Autumn_Boots {
+        internal static System.Drawing.Bitmap Abrigo {
             get {
-                object obj = ResourceManager.GetObject("Autumn_Boots", resourceCulture);
+                object obj = ResourceManager.GetObject("Abrigo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Autumn_Coat {
+        internal static System.Drawing.Bitmap Bañador {
             get {
-                object obj = ResourceManager.GetObject("Autumn_Coat", resourceCulture);
+                object obj = ResourceManager.GetObject("Bañador", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,69 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Autumn_Pants {
+        internal static System.Drawing.Bitmap Bikini {
             get {
-                object obj = ResourceManager.GetObject("Autumn_Pants", resourceCulture);
+                object obj = ResourceManager.GetObject("Bikini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Blusa {
+            get {
+                object obj = ResourceManager.GetObject("Blusa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Botas {
+            get {
+                object obj = ResourceManager.GetObject("Botas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Camiseta {
+            get {
+                object obj = ResourceManager.GetObject("Camiseta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chaqueta {
+            get {
+                object obj = ResourceManager.GetObject("Chaqueta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap disfraz {
+            get {
+                object obj = ResourceManager.GetObject("disfraz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Falda {
+            get {
+                object obj = ResourceManager.GetObject("Falda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +156,16 @@ namespace DressDoll.Properties {
         internal static System.Drawing.Bitmap Girl_1 {
             get {
                 object obj = ResourceManager.GetObject("Girl_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jeans {
+            get {
+                object obj = ResourceManager.GetObject("Jeans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -122,6 +192,16 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pantalones {
+            get {
+                object obj = ResourceManager.GetObject("Pantalones", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap parque {
             get {
                 object obj = ResourceManager.GetObject("parque", resourceCulture);
@@ -141,26 +221,6 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Pirate_Boy_Costume {
-            get {
-                object obj = ResourceManager.GetObject("Pirate_Boy_Costume", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Pirate_Girl_Costume {
-            get {
-                object obj = ResourceManager.GetObject("Pirate_Girl_Costume", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap playa {
             get {
                 object obj = ResourceManager.GetObject("playa", resourceCulture);
@@ -171,9 +231,9 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Spring_Cardigan {
+        internal static System.Drawing.Bitmap Sandalias {
             get {
-                object obj = ResourceManager.GetObject("Spring_Cardigan", resourceCulture);
+                object obj = ResourceManager.GetObject("Sandalias", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -181,99 +241,9 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Spring_Jacket {
+        internal static System.Drawing.Bitmap Shorts {
             get {
-                object obj = ResourceManager.GetObject("Spring_Jacket", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Spring_Skirt {
-            get {
-                object obj = ResourceManager.GetObject("Spring_Skirt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Summer_Dress {
-            get {
-                object obj = ResourceManager.GetObject("Summer_Dress", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Summer_Sandals {
-            get {
-                object obj = ResourceManager.GetObject("Summer_Sandals", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Summer_Shoes {
-            get {
-                object obj = ResourceManager.GetObject("Summer_Shoes", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Summer_Shorts {
-            get {
-                object obj = ResourceManager.GetObject("Summer_Shorts", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Summer_Skirt {
-            get {
-                object obj = ResourceManager.GetObject("Summer_Skirt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Summer_Swimsuit_1 {
-            get {
-                object obj = ResourceManager.GetObject("Summer_Swimsuit_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Summer_Swimsuit_2 {
-            get {
-                object obj = ResourceManager.GetObject("Summer_Swimsuit_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Summer_T_Shirt {
-            get {
-                object obj = ResourceManager.GetObject("Summer_T_Shirt", resourceCulture);
+                object obj = ResourceManager.GetObject("Shorts", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -291,9 +261,9 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Winter_Boots {
+        internal static System.Drawing.Bitmap Vestido {
             get {
-                object obj = ResourceManager.GetObject("Winter_Boots", resourceCulture);
+                object obj = ResourceManager.GetObject("Vestido", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -301,69 +271,9 @@ namespace DressDoll.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Winter_boots_2 {
+        internal static System.Drawing.Bitmap Zapatos {
             get {
-                object obj = ResourceManager.GetObject("Winter_boots_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Winter_Dress {
-            get {
-                object obj = ResourceManager.GetObject("Winter_Dress", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Winter_Jacket {
-            get {
-                object obj = ResourceManager.GetObject("Winter_Jacket", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Winter_Jeans {
-            get {
-                object obj = ResourceManager.GetObject("Winter_Jeans", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Winter_Pants {
-            get {
-                object obj = ResourceManager.GetObject("Winter_Pants", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Winter_Scarf_and_Hat {
-            get {
-                object obj = ResourceManager.GetObject("Winter_Scarf_and_Hat", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Winter_Sweater {
-            get {
-                object obj = ResourceManager.GetObject("Winter_Sweater", resourceCulture);
+                object obj = ResourceManager.GetObject("Zapatos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
