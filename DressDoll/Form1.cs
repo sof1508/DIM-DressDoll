@@ -75,7 +75,13 @@ namespace DressDoll
                                         player.SoundLocation = "../../Resources/musica.wav";
                                         player.Load();
                                         player.Play();
-                                        break;                                      
+                                        break;
+                                    case "villancico":
+                                        player.SoundLocation = "../../Resources/Jingle Bells.wav";
+                                        player.Load();
+                                        player.Play();
+                                        break;
+                                        
                                 }
                                     
                             }
@@ -407,6 +413,9 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             musicaChoice.Add(resultValueBuilder);
 
+            choiceResultValue = new SemanticResultValue("Villancico", "villancico");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            musicaChoice.Add(resultValueBuilder);
 
 
             // Fin música
