@@ -145,6 +145,12 @@ namespace DressDoll
                             case "Abrigo":
                                 parteArriba.Image = DressDoll.Properties.Resources.Abrigo;
                                 break;
+                            case "Blusa":
+                                parteArriba.Image = DressDoll.Properties.Resources.Blusa;
+                                break;
+                            case "Jersey":
+                                parteArriba.Image = DressDoll.Properties.Resources.Jersey;
+                                break; 
                         }
                         //poner a true  parte Arriba doll
                         doll.ParteArriba = true;
@@ -161,6 +167,10 @@ namespace DressDoll
                             case "Botas":
                                 zapatos.Image = DressDoll.Properties.Resources.Botas;
                                 break;
+                            case "Sandalias":
+                                zapatos.Image = DressDoll.Properties.Resources.Sandalias;
+                                break;
+                    
                         }
                         // poner a true  zapatos doll
                         doll.Zapatos = true;
@@ -182,6 +192,9 @@ namespace DressDoll
                         {
                             case "Vestido":
                                 parteEntera.Image = DressDoll.Properties.Resources.Vestido;
+                                break;
+                            case "Playero":
+                                parteEntera.Image = DressDoll.Properties.Resources.Playero;
                                 break;
                             case "Bikini":
                                 parteEntera.Image = DressDoll.Properties.Resources.Bikini;
@@ -310,6 +323,14 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
 
+            choiceResultValue = new SemanticResultValue("Blusa", "Blusa");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            partesArribaChoice.Add(resultValueBuilder);
+
+            choiceResultValue = new SemanticResultValue("Jersey", "Jersey");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            partesArribaChoice.Add(resultValueBuilder);
+
             choiceResultValue = new SemanticResultValue("parte de arriba", "ParteArriba");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
@@ -317,6 +338,10 @@ namespace DressDoll
 
             // Partes entera
             choiceResultValue = new SemanticResultValue("Vestido", "Vestido");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            parteEnteraChoice.Add(resultValueBuilder);
+
+            choiceResultValue = new SemanticResultValue("Playero", "Playero");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
 
@@ -347,6 +372,10 @@ namespace DressDoll
             zapatosChoice.Add(resultValueBuilder);
 
             choiceResultValue = new SemanticResultValue("Botas", "Botas");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            zapatosChoice.Add(resultValueBuilder);
+
+            choiceResultValue = new SemanticResultValue("Sandalias", "Sandalias");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
 

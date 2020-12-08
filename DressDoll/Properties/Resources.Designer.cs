@@ -211,6 +211,16 @@ namespace DressDoll.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jersey {
+            get {
+                object obj = ResourceManager.GetObject("Jersey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream Jingle_Bells {
@@ -264,6 +274,16 @@ namespace DressDoll.Properties {
         internal static System.Drawing.Bitmap playa {
             get {
                 object obj = ResourceManager.GetObject("playa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Playero {
+            get {
+                object obj = ResourceManager.GetObject("Playero", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -106,6 +106,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Playero.png" />
     <None Include="Resources\Zapatos.png" />
     <None Include="Resources\Abrigo.png" />
     <None Include="Resources\Bañador.png" />
@@ -122,6 +123,7 @@
     <None Include="Resources\clase.jpg" />
     <Content Include="Resources\Girl 1.png" />
     <None Include="Resources\Jeans.png" />
+    <None Include="Resources\Jersey.png" />
     <Content Include="Resources\Jingle Bells.wav" />
     <Content Include="Resources\navidad.jpg" />
     <None Include="Resources\Pantalones.png" />

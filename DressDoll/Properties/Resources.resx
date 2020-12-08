@@ -163,6 +163,9 @@
   <data name="Jeans" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jeans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Jersey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jersey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Jingle_Bells" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jingle Bells.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -180,6 +183,9 @@
   </data>
   <data name="playa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\playa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Playero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Playero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sandalias" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sandalias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
