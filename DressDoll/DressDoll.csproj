@@ -94,30 +94,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Boy 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boy 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boy 3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boy 4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Girl 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Girl 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Girl 3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Girl 4.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
@@ -130,109 +106,50 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Autumn Boots.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Autumn Coat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Autumn Pants.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Autumn Tights.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Pirate Boy Costume.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Pirate Girl Costume.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Spring Cardigan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Spring Jacket.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Spring Skirt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Summer Swimsuit 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Summer_Dress.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Summer_Hat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Summer_Sandals.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Summer_Shoes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Summer_Shorts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Skirt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Summer_Swimsuit 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Summer_T-Shirt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tights.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Winter boots 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Winter Boots.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\winter clothes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Winter Dress.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Winter Jacket.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Winter Jeans.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Winter Pants.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Winter Scarf and Hat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Winter Sweater.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Summer_Skirt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TrajeFestivo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\playa.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\parque.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\navidad.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Jingle Bells.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pirata.wav" />
+    <Content Include="Resources\Abrigo.png" />
+    <Content Include="Resources\Autumn Boots.png" />
+    <Content Include="Resources\Autumn Tights.png" />
+    <Content Include="Resources\Bañador.png" />
+    <Content Include="Resources\Bikini.png" />
+    <Content Include="Resources\Botas.png" />
+    <Content Include="Resources\Boy 1.png" />
+    <Content Include="Resources\Boy 2.png" />
+    <Content Include="Resources\Boy 3.png" />
+    <Content Include="Resources\Boy 4.png" />
+    <Content Include="Resources\Camiseta.png" />
+    <Content Include="Resources\Chaqueta.png" />
+    <Content Include="Resources\Disfraz de pirata.png" />
+    <Content Include="Resources\Disfraz navideño.png" />
+    <Content Include="Resources\Falda.png" />
+    <Content Include="Resources\Girl 1.png" />
+    <Content Include="Resources\Girl 2.png" />
+    <Content Include="Resources\Girl 3.png" />
+    <Content Include="Resources\Girl 4.png" />
+    <Content Include="Resources\Girl 5.png" />
+    <Content Include="Resources\Jingle Bells.wav" />
+    <Content Include="Resources\navidad.jpg" />
+    <Content Include="Resources\Pantalones cortos.png" />
+    <Content Include="Resources\Pantalones.png" />
+    <Content Include="Resources\parque.jpg" />
+    <Content Include="Resources\pirata.wav" />
+    <Content Include="Resources\Pirate Girl Costume.png" />
+    <Content Include="Resources\playa.jpg" />
+    <Content Include="Resources\Skirt.png" />
+    <Content Include="Resources\Spring Skirt.png" />
+    <Content Include="Resources\Summer_Hat.png" />
+    <Content Include="Resources\Summer_Sandals.png" />
+    <Content Include="Resources\Summer_T-Shirt.png" />
+    <Content Include="Resources\Tights.png" />
+    <Content Include="Resources\Vestido.png" />
+    <Content Include="Resources\Winter boots 2.png" />
+    <Content Include="Resources\winter clothes.png" />
+    <Content Include="Resources\Winter Dress.png" />
+    <Content Include="Resources\Winter Jacket.png" />
+    <Content Include="Resources\Winter Jeans.png" />
+    <Content Include="Resources\Winter Pants.png" />
+    <Content Include="Resources\Winter Scarf and Hat.png" />
+    <Content Include="Resources\Winter Sweater.png" />
+    <Content Include="Resources\Zapatos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
