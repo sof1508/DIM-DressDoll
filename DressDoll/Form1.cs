@@ -72,7 +72,7 @@ namespace DressDoll
                                 switch (musica) 
                                 {
                                     case "musica":
-                                        player.SoundLocation = "../../Resources/musica.wav";
+                                        if(player.SoundLocation == "") player.SoundLocation = "../../Resources/musica.wav";
                                         player.Load();
                                         player.Play();
                                         break;
