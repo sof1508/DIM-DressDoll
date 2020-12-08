@@ -121,6 +121,9 @@
   <data name="Abrigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Abrigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="barco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barco.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bañador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bañador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,6 +144,12 @@
   </data>
   <data name="Chaqueta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chaqueta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cine.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clase.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="disfraz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\disfraz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -199,7 +199,7 @@ namespace DressDoll
                                 break;
                             case "Disfraz de pirata":
                                 parteEntera.Image = DressDoll.Properties.Resources.disfraz;
-                                this.BackgroundImage = DressDoll.Properties.Resources.playa;
+                                this.BackgroundImage = DressDoll.Properties.Resources.barco;
                                 //musica
                                 player.SoundLocation = "../../Resources/pirata.wav";
                                 player.Load();
@@ -249,6 +249,19 @@ namespace DressDoll
                     case "parque":
                         this.BackgroundImage = DressDoll.Properties.Resources.parque;
                         break;
+                    case "barco":
+                        this.BackgroundImage = DressDoll.Properties.Resources.barco;
+                        break;
+                    case "casa":
+                        this.BackgroundImage = DressDoll.Properties.Resources.navidad;
+                        break;
+                    case "cine":
+                        this.BackgroundImage = DressDoll.Properties.Resources.cine;
+                        break;
+                    case "clase":
+                        this.BackgroundImage = DressDoll.Properties.Resources.clase;
+                        break;
+
                 }
             }
         }
@@ -373,6 +386,26 @@ namespace DressDoll
 
             choiceResultValue =
                    new SemanticResultValue("Playa", "playa");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            lugaresChoice.Add(resultValueBuilder);
+
+            choiceResultValue =
+                   new SemanticResultValue("Barco", "barco");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            lugaresChoice.Add(resultValueBuilder);
+
+            choiceResultValue =
+                   new SemanticResultValue("Casa por navidad", "casa");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            lugaresChoice.Add(resultValueBuilder);
+
+            choiceResultValue =
+                   new SemanticResultValue("Cine", "cine");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            lugaresChoice.Add(resultValueBuilder);
+
+            choiceResultValue =
+                  new SemanticResultValue("Clase", "clase");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             lugaresChoice.Add(resultValueBuilder);
 
