@@ -61,8 +61,30 @@ namespace DressDoll
                     if (!semantics.ContainsKey("Apagar"))
                     {
                         if (!semantics.ContainsKey("Cambiar"))
-                        { 
-                        
+                        {
+                            if (!semantics.ContainsKey("Encender"))
+                            {
+                            }
+                            else 
+                            {
+                                String musica = ((string)semantics["musica"].Value);
+                                synth.Speak("Poniendo " + musica);
+                                switch (musica) 
+                                {
+                                    case "musica":
+                                        player.SoundLocation = "../../Resources/musica.wav";
+                                        player.Load();
+                                        player.Play();
+                                        break;
+                                    case "villancico":
+                                        player.SoundLocation = "../../Resources/Jingle Bells.wav";
+                                        player.Load();
+                                        player.Play();
+                                        break;
+                                        
+                                }
+                                    
+                            }
                         }
                         else
                         {
@@ -388,6 +410,12 @@ namespace DressDoll
             choiceResultValue = new SemanticResultValue("Música", "musica");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             musicaChoice.Add(resultValueBuilder);
+
+            choiceResultValue = new SemanticResultValue("Villancico", "villancico");
+            resultValueBuilder = new GrammarBuilder(choiceResultValue);
+            musicaChoice.Add(resultValueBuilder);
+
+
             // Fin música
 
             //Creación de palabras claves 
@@ -483,6 +511,12 @@ namespace DressDoll
             GrammarBuilder apagarFrase = new GrammarBuilder(choiceResultKeyQuitar);
             apagarFrase.Append(musica);
 
+            GrammarBuilder encender = "Encender";
+            Choices encenderAlternativa = new Choices(poner, encender);
+            SemanticResultKey choiceResultKeyEncender = new SemanticResultKey("Encender", encenderAlternativa);
+            GrammarBuilder encenderFrase = new GrammarBuilder(choiceResultKeyEncender);
+            encenderFrase.Append(musica);
+
             GrammarBuilder cambiarA = "Cambiar a";
             GrammarBuilder cambiarDe = "Cambiar de";
             Choices cambiarDeAlternativa = new Choices(cambiarA, cambiarDe);
@@ -494,7 +528,7 @@ namespace DressDoll
             GrammarBuilder fondoFrase = new GrammarBuilder("Ir a");
             fondoFrase.Append(lugares);
 
-            Choices opcionesFrase = new Choices(new GrammarBuilder[] {ponerFrase, quitarFrase, apagarFrase, fondoFrase, cambiarFrase});
+            Choices opcionesFrase = new Choices(new GrammarBuilder[] {ponerFrase, quitarFrase, apagarFrase, encenderFrase, fondoFrase, cambiarFrase});
             Grammar grammar = new Grammar((GrammarBuilder)opcionesFrase);
             grammar.Name = "Poner/Cambiar";
             return grammar;

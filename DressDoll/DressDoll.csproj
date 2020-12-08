@@ -125,6 +125,7 @@
     <None Include="Resources\Jeans.png" />
     <None Include="Resources\Jersey.png" />
     <Content Include="Resources\Jingle Bells.wav" />
+    <None Include="Resources\musica.wav" />
     <Content Include="Resources\navidad.jpg" />
     <None Include="Resources\Pantalones.png" />
     <Content Include="Resources\parque.jpg" />
