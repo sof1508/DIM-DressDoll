@@ -118,7 +118,10 @@ namespace DressDoll
                     else
                     {
                         if (semantics.ContainsKey("musica"))
+                        {
+                            synth.Speak("Apagando música");
                             player.Stop();
+                        } 
                     }
                 }
                 else {
