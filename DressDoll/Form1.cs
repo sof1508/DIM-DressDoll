@@ -175,29 +175,50 @@ namespace DressDoll
                         // poner a true  parte Entera doll
                         doll.ParteEntera = true;
                     }
-                    else if (!semantics.ContainsKey("Quitar"))
+                }
+                
+                if (semantics.ContainsKey("Quitar"))
+                {
+                    synth.Speak("entrando a quitar");
+
+                    if (semantics.ContainsKey("partesArriba"))
                     {
-                        
-                    } else
-                    {
-                        synth.Speak("entrando a quitar");
-                        if (semantics.ContainsKey("parte de arriba"))
-                        {
-                            parteArriba.Image = null;
-                        }
-                        else if (semantics.ContainsKey("parte de abajo"))
-                        {
-                            parteAbajo.Image = null;
-                        }
-                        else if (semantics.ContainsKey("zapatos"))
-                        {
-                            zapatos.Image = null;
-                        }
-                        else if (semantics.ContainsKey("atuendo"))
-                        {
-                            parteEntera.Image = null;
-                        }
+                        parteArriba.Image = null;
+                        System.Diagnostics.Debug.WriteLine("RESPUESTA: partesArriba");
                     }
+                    else if (semantics.ContainsKey("partesAbajo"))
+                    {
+                        parteAbajo.Image = null;
+                        System.Diagnostics.Debug.WriteLine("RESPUESTA: partesAbajo");
+                    }
+                    else if (semantics.ContainsKey("zapatos"))
+                    {
+                        zapatos.Image = null;
+                        System.Diagnostics.Debug.WriteLine("RESPUESTA: zapatos");
+                    }
+                    else if (semantics.ContainsKey("parteEntera"))
+                    {
+                        parteEntera.Image = null;
+                        System.Diagnostics.Debug.WriteLine("RESPUESTA: parteEntera");
+                    }
+
+                    /*if (semantics.ContainsKey("ParteArriba"))
+                    {
+                        parteArriba.Image = null;
+                    }
+                    else if (semantics.ContainsKey("ParteAbajo"))
+                    {
+                        parteAbajo.Image = null;
+                    }
+                    else if (semantics.ContainsKey("zapatos"))
+                    {
+                        zapatos.Image = null;
+                    }
+                    else if (semantics.ContainsKey("ParteEntera"))
+                    {
+                        parteEntera.Image = null;
+                    }*/
+
                 }
             }
             else
@@ -341,20 +362,6 @@ namespace DressDoll
 
             GrammarBuilder lugares = new GrammarBuilder(choiceResultKeyLugares);
 
-            //GB para quitar la ropa
-            Choices qRopa = new Choices();
-            GrammarBuilder qpArriba = new GrammarBuilder(new SemanticResultValue("parte de arriba", 0));
-            qRopa.Add(qpArriba);
-            GrammarBuilder qpAbajo = new GrammarBuilder(new SemanticResultValue("parte de abajo", 1));
-            qRopa.Add(qpAbajo);
-            GrammarBuilder qZapatos = new GrammarBuilder(new SemanticResultValue("zapatos", 3));
-            qRopa.Add(qZapatos);
-            GrammarBuilder qAtuendo = new GrammarBuilder(new SemanticResultValue("atuendo", 4));
-            qRopa.Add(qAtuendo);
-
-            GrammarBuilder quitarRopa = new GrammarBuilder(new SemanticResultKey("remove", qRopa));
-
-           
             //FRASES
             GrammarBuilder poner = "Poner";
             GrammarBuilder cambiar = "Cambiar";

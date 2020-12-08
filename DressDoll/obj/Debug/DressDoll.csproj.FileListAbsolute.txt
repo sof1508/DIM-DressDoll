@@ -27,3 +27,13 @@ D:\Escritorio\DressDoll\DressDoll\obj\Debug\DressDoll.Properties.Resources.resou
 D:\Escritorio\DressDoll\DressDoll\obj\Debug\DressDoll.csproj.GenerateResource.cache
 D:\Escritorio\DressDoll\DressDoll\obj\Debug\DressDoll.exe
 D:\Escritorio\DressDoll\DressDoll\obj\Debug\DressDoll.pdb
+A:\Escritorio\DIM-DressDoll\DressDoll\bin\Debug\DressDoll.exe.config
+A:\Escritorio\DIM-DressDoll\DressDoll\bin\Debug\DressDoll.exe
+A:\Escritorio\DIM-DressDoll\DressDoll\bin\Debug\DressDoll.pdb
+A:\Escritorio\DIM-DressDoll\DressDoll\obj\Debug\DressDoll.csprojAssemblyReference.cache
+A:\Escritorio\DIM-DressDoll\DressDoll\obj\Debug\DressDoll.Form1.resources
+A:\Escritorio\DIM-DressDoll\DressDoll\obj\Debug\DressDoll.Properties.Resources.resources
+A:\Escritorio\DIM-DressDoll\DressDoll\obj\Debug\DressDoll.csproj.GenerateResource.cache
+A:\Escritorio\DIM-DressDoll\DressDoll\obj\Debug\DressDoll.csproj.CoreCompileInputs.cache
+A:\Escritorio\DIM-DressDoll\DressDoll\obj\Debug\DressDoll.exe
+A:\Escritorio\DIM-DressDoll\DressDoll\obj\Debug\DressDoll.pdb
