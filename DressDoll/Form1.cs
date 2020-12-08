@@ -319,16 +319,16 @@ namespace DressDoll
             partesAbajoChoice.Add(resultValueBuilder);
 
             choiceResultValue =
-                   new SemanticResultValue("Pantalón", "Pantalones");
+                   new SemanticResultValue("Pantalones", "Pantalones");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesAbajoChoice.Add(resultValueBuilder);
 
             choiceResultValue =
-                   new SemanticResultValue("Shorts", "Pantalones cortos");
+                   new SemanticResultValue("Pantalones cortos", "Pantalones cortos");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesAbajoChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("parte de abajo", "ParteAbajo");
+            choiceResultValue = new SemanticResultValue("parte de abajo", "Parte de abajo");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesAbajoChoice.Add(resultValueBuilder);
             // Fin partes de abajo
@@ -355,7 +355,7 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("parte de arriba", "ParteArriba");
+            choiceResultValue = new SemanticResultValue("parte de arriba", "Parte de arriba");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             partesArribaChoice.Add(resultValueBuilder);
             // Fin partes de arriba
@@ -365,15 +365,15 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("Playero", "Playero");
+            choiceResultValue = new SemanticResultValue("Vestido playero", "Playero");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("Festivo", "Disfraz navideño");
+            choiceResultValue = new SemanticResultValue("Disfraz festivo", "Disfraz navideño");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("Disfraz", "Disfraz de pirata");
+            choiceResultValue = new SemanticResultValue("Disfraz de pirata", "Disfraz de pirata");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
 
@@ -385,7 +385,7 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("atuendo", "ParteEntera");
+            choiceResultValue = new SemanticResultValue("atuendo", "Atuendo");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             parteEnteraChoice.Add(resultValueBuilder);
             // Fin partes enteras
@@ -403,7 +403,7 @@ namespace DressDoll
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
 
-            choiceResultValue = new SemanticResultValue("calzado", "zapatos");
+            choiceResultValue = new SemanticResultValue("calzado", "Calzado");
             resultValueBuilder = new GrammarBuilder(choiceResultValue);
             zapatosChoice.Add(resultValueBuilder);
             // Fin zapatos
